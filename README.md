@@ -12,9 +12,10 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * scientific notation with some tweaks...
 * **E+3** / **E-3** = add or subtract 3 from the exponent
 * polar to rectangular conversion
-* easy key definition:
+* tabular key definition:
 
 `    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}      });`
+
 `    calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, new Calc.action(){  public void doAction(){ calc.op_rect_polar();}  });`
 
 **Default layout:**
