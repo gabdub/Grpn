@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Grpn</string>
+    <string name="action_copy">Copiar X</string>
+    <string name="action_paste">Pegar</string>
+</resources>
