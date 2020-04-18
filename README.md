@@ -8,7 +8,7 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **UNDO** = arguments of the last operation
 * **X//Y** = (X+Y)/(X*Y) = 2 resistors in parallel
 * **X/(X+Y)** = voltage divider
-* **2πF** = 2 * PI * frequency (frequency is read from F memory)
+* **2πF** = 2 * PI * frequency (the frequency is get from the **F** memory)
 * scientific notation with some tweaks...
 * **E+3** / **E-3** = add or subtract 3 from the exponent
 * polar to rectangular conversion
