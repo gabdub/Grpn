@@ -6,7 +6,7 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * 6 memories: A to F
 * stack of 100 levels
 * **UNDO** = arguments of the last operation
-* **X//Y** = (X+Y)/(X*Y) = 2 resistors in parallel
+* **X//Y** = (X*Y)/(X+Y) = 2 resistors in parallel
 * **X/(X+Y)** = voltage divider
 * **2πF** = 2 * PI * frequency (the frequency is get from the **F** memory)
 * scientific notation with some tweaks...
