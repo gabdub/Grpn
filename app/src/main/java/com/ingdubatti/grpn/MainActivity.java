@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             txt3.setText(R.string.grpn_github);
             txt2.setText("");
             txt1.setText(R.string.grpn_version);
-            txt1.setBackgroundColor(0xFFFFF5E9); //default
+            txt1.setBackgroundColor(Calc.backcolor); //force default back color
             return true;
         }
         return false;

@@ -18,8 +18,10 @@ class Calc {
     static final int TRIG= 4;
     private static final int _KEY_MULT= 8;
 
-    private static final int hicolor= 0xff0000c0;  //dark blue
-    private static final int locolor= 0xff000000;  //black
+    static final int hicolor= 0xff0000c0;  //dark blue
+    static final int locolor= 0xff000000;  //black
+    static final int edbackcolor= 0xFFFFFFFF;  //white
+    static final int backcolor= 0xFFFFF5E9;  //light yellow
 
     private static final int MAXSTACK= 100;
     static final int MAXVARS= 6;   //A...F
@@ -176,10 +178,10 @@ class Calc {
         TextView txt4 = activity.findViewById(R.id.val4);
         if( editando ){
             txt1.setText(editLine);
-            txt1.setBackgroundColor(0xFFFFFFFF); //blanco
+            txt1.setBackgroundColor(edbackcolor); //blanco
         }else{
             txt1.setText(convertStackPos(1, true)); //show x with decorators
-            txt1.setBackgroundColor(0xFFFFF5E9); //default
+            txt1.setBackgroundColor(backcolor); //default
         }
         txt2.setText(convertStackPos(2, true)); //show y with decorators
         txt3.setText(convertStackPos(3, true)); //show z with decorators

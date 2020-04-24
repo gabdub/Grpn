@@ -27,20 +27,22 @@
             android:width="15dp"
             android:gravity="center_vertical"
             android:text="t:"
-            android:textColor="#FFF5E9" />
+            android:textColor="#FFF5E9"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/val4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:width="600px"
             android:background="#FFF5E9"
             android:fontFamily="monospace"
             android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
             android:text="0.0"
             android:textAlignment="textEnd"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -60,20 +62,22 @@
             android:width="15dp"
             android:gravity="center_vertical"
             android:text="z:"
-            android:textColor="#FFF5E9" />
+            android:textColor="#FFF5E9"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/val3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:width="600px"
             android:background="#FFF5E9"
             android:fontFamily="monospace"
             android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
             android:text="0.0"
             android:textAlignment="textEnd"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -93,20 +97,22 @@
             android:width="15dp"
             android:gravity="center_vertical"
             android:text="y:"
-            android:textColor="#FFF5E9" />
+            android:textColor="#FFF5E9"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/val2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:width="600px"
             android:background="#FFF5E9"
             android:fontFamily="monospace"
             android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
             android:text="0.0"
             android:textAlignment="textEnd"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -126,20 +132,22 @@
             android:width="15dp"
             android:gravity="center_vertical"
             android:text="x:"
-            android:textColor="#FFF5E9" />
+            android:textColor="#FFF5E9"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/val1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
-            android:width="600px"
             android:background="#FFF5E9"
             android:fontFamily="monospace"
             android:gravity="right|center_vertical"
+            android:paddingRight="10dp"
             android:text="0.0"
             android:textAlignment="textEnd"
-            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -165,7 +173,9 @@
                 android:backgroundTint="#C5E1A5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="ENTER" />
+                android:text="ENTER"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bSigno"
@@ -174,7 +184,9 @@
                 android:backgroundTint="#FFF3E0"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="+/-" />
+                android:text="+/-"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDelete"
@@ -183,7 +195,9 @@
                 android:backgroundTint="#F8BBD0"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="DEL" />
+                android:text="DEL"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_A"
@@ -192,7 +206,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[A]" />
+                android:text="[A]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_B"
@@ -201,7 +217,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[B]" />
+                android:text="[B]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_C"
@@ -210,7 +228,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[C]" />
+                android:text="[C]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMenu"
@@ -219,7 +239,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="..." />
+                android:text="..."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -234,7 +256,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="7" />
+                android:text="7"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b8"
@@ -243,7 +267,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="8" />
+                android:text="8"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b9"
@@ -252,7 +278,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="9" />
+                android:text="9"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDiv"
@@ -261,7 +289,9 @@
                 android:backgroundTint="#FFECB3"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="/" />
+                android:text="/"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_D"
@@ -270,7 +300,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[D]" />
+                android:text="[D]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_E"
@@ -279,7 +311,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[E]" />
+                android:text="[E]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_F"
@@ -288,7 +322,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="[F]" />
+                android:text="[F]"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bHex"
@@ -297,7 +333,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="HEX" />
+                android:text="HEX"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -312,7 +350,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="4" />
+                android:text="4"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b5"
@@ -321,7 +361,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="5" />
+                android:text="5"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b6"
@@ -330,7 +372,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="6" />
+                android:text="6"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMult"
@@ -339,7 +383,9 @@
                 android:backgroundTint="#FFECB3"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="*" />
+                android:text="*"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bRaiz"
@@ -348,7 +394,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="⎷x" />
+                android:text="⎷x"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPower"
@@ -357,7 +405,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="y^x" />
+                android:text="y^x"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bLog"
@@ -366,7 +416,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="LOG" />
+                android:text="LOG"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bLN"
@@ -375,7 +427,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="LN" />
+                android:text="LN"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -390,7 +444,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="1" />
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b2"
@@ -399,7 +455,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="2" />
+                android:text="2"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b3"
@@ -408,7 +466,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="3" />
+                android:text="3"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMenos"
@@ -417,7 +477,9 @@
                 android:backgroundTint="#FFECB3"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="-" />
+                android:text="-"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bParalelo"
@@ -426,7 +488,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="x || y" />
+                android:text="x || y"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDivisor"
@@ -435,7 +499,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="x/(x+y)" />
+                android:text="x/(x+y)"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bInv"
@@ -444,7 +510,9 @@
                 android:backgroundTint="#FFCDD2"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="1/x" />
+                android:text="1/x"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bSwap"
@@ -453,7 +521,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="SWAP" />
+                android:text="SWAP"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -468,7 +538,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="0" />
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPunto"
@@ -477,7 +549,9 @@
                 android:backgroundTint="#E6E6E6"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="." />
+                android:text="."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPI"
@@ -486,7 +560,9 @@
                 android:backgroundTint="#FCE4EC"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="PI" />
+                android:text="PI"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMas"
@@ -495,7 +571,9 @@
                 android:backgroundTint="#FFECB3"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="+" />
+                android:text="+"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bExp"
@@ -504,7 +582,9 @@
                 android:backgroundTint="#FFF3E0"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="EEX" />
+                android:text="EEX"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bK_exp"
@@ -513,7 +593,9 @@
                 android:backgroundTint="#FFF3E0"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="E+3" />
+                android:text="E+3"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMili_exp"
@@ -522,7 +604,9 @@
                 android:backgroundTint="#FFF3E0"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="E-3" />
+                android:text="E-3"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bShift"
@@ -531,7 +615,9 @@
                 android:backgroundTint="#F3E5F5"
                 android:minWidth="80dip"
                 android:minHeight="40dip"
-                android:text="Shift" />
+                android:text="Shift"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
         </TableRow>
 
     </TableLayout>
