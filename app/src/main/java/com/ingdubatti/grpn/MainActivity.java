@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
                     calc.menu_paste_str(txt);
                 }
             }
+            return true;
+        }
+        if (id == R.id.action_about) {  //ABOUT
+            TextView txt1 = findViewById(R.id.val1);
+            TextView txt2 = findViewById(R.id.val2);
+            TextView txt3 = findViewById(R.id.val3);
+            TextView txt4 = findViewById(R.id.val4);
+            txt4.setText(R.string.grpn_tit);
+            txt3.setText(R.string.grpn_github);
+            txt2.setText("");
+            txt1.setText(R.string.grpn_version);
+            txt1.setBackgroundColor(0xFFFFF5E9); //default
             return true;
         }
         return false;
