@@ -36,7 +36,7 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 **HEX mode:**
 
 * numbers are displayed in hexadecimal with up to two decimal bytes
-* **<<4** / **>>4** = shift one byte to the right (x/16) or left (x*16)
+* **<<4** / **>>4** = shift one nibble (4 bits) to the right (x/16) or left (x*16)
 * **NOT** = one's complement
 
 ![Hex layout](https://github.com/gabdub/Grpn/raw/master/screencapt/hex.jpg "Hex layout")
