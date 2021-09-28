@@ -308,15 +308,31 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bDiv, Calc.NORMAL, "/", false, new Calc.action(){
             public void doAction(){ calc.op_div();}
         });
+        calc.defKey(R.id.bDiv, Calc.SHIFT, "/ ▶ %", false, new Calc.action(){
+            public void doAction(){ calc.op_div_porc();}
+        });
+
         calc.defKey(R.id.bMult, Calc.NORMAL, "*", false, new Calc.action(){
             public void doAction(){ calc.op_mult();}
         });
+        calc.defKey(R.id.bMult, Calc.SHIFT, "%", false, new Calc.action(){
+            public void doAction(){ calc.op_porc();}
+        });
+
         calc.defKey(R.id.bMenos, Calc.NORMAL, "-", false, new Calc.action(){
             public void doAction(){ calc.op_sub();}
         });
+        calc.defKey(R.id.bMenos, Calc.SHIFT, "- & +", false, new Calc.action(){
+            public void doAction(){ calc.op_sub_add();}
+        });
+
         calc.defKey(R.id.bMas, Calc.NORMAL, "+", false, new Calc.action(){
             public void doAction(){ calc.op_add();}
         });
+        calc.defKey(R.id.bMas, Calc.SHIFT, "-/+ %", false, new Calc.action(){
+            public void doAction(){ calc.op_sub_add_porc();}
+        });
+
         calc.defKey(R.id.bPunto, Calc.NORMAL, ".", false, new Calc.action(){
             public void doAction(){ calc.edit_point();}
         });

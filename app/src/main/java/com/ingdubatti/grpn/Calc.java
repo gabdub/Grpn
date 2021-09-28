@@ -665,12 +665,34 @@ class Calc {
         if( getOpArgs(2) )    pushStack( stack_y - stack_x );
     }
 
+    void op_sub_add() {             //"- & +"
+        if( getOpArgs(2) ){
+            pushStack( stack_y - stack_x );
+            pushStack( stack_y + stack_x );
+        }
+    }
+
+    void op_sub_add_porc() {             //"-/+ %"
+        if( getOpArgs(2) ){
+            pushStack( stack_y * (1.0 - stack_x/100.0) );
+            pushStack( stack_y * (1.0 + stack_x/100.0) );
+        }
+    }
+
     void op_mult() {            //"*"
         if( getOpArgs(2) )    pushStack( stack_y * stack_x );
     }
 
+    void op_porc() {            //"%"
+        if( getOpArgs(2) )    pushStack( stack_y * stack_x / 100.0);
+    }
+
     void op_div() {             //"/"
         if( getOpArgs(2) )    pushStack( stack_y / stack_x );
+    }
+
+    void op_div_porc() {             //"/ > %"
+        if( getOpArgs(2) )    pushStack( (stack_y * 100.0) / stack_x );
     }
 
     void op_sqrt() {            //"\/x"

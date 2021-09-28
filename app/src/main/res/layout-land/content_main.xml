@@ -42,7 +42,7 @@
             android:text="0.0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -77,7 +77,7 @@
             android:text="0.0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -112,7 +112,7 @@
             android:text="0.0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -147,7 +147,7 @@
             android:text="0.0"
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
     </TableRow>
 
@@ -175,7 +175,7 @@
                 android:minHeight="40dip"
                 android:text="ENTER"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bSigno"
@@ -186,7 +186,7 @@
                 android:minHeight="40dip"
                 android:text="+/-"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bDelete"
@@ -197,7 +197,7 @@
                 android:minHeight="40dip"
                 android:text="DEL"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_A"
@@ -208,7 +208,7 @@
                 android:minHeight="40dip"
                 android:text="[A]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_B"
@@ -219,7 +219,7 @@
                 android:minHeight="40dip"
                 android:text="[B]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_C"
@@ -230,7 +230,7 @@
                 android:minHeight="40dip"
                 android:text="[C]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bMenu"
@@ -241,7 +241,7 @@
                 android:minHeight="40dip"
                 android:text="..."
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -258,7 +258,7 @@
                 android:minHeight="40dip"
                 android:text="7"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b8"
@@ -269,7 +269,7 @@
                 android:minHeight="40dip"
                 android:text="8"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b9"
@@ -280,7 +280,7 @@
                 android:minHeight="40dip"
                 android:text="9"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bDiv"
@@ -291,7 +291,7 @@
                 android:minHeight="40dip"
                 android:text="/"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_D"
@@ -302,7 +302,7 @@
                 android:minHeight="40dip"
                 android:text="[D]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_E"
@@ -313,7 +313,7 @@
                 android:minHeight="40dip"
                 android:text="[E]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b_F"
@@ -324,7 +324,7 @@
                 android:minHeight="40dip"
                 android:text="[F]"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bHex"
@@ -335,7 +335,7 @@
                 android:minHeight="40dip"
                 android:text="HEX"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -352,7 +352,7 @@
                 android:minHeight="40dip"
                 android:text="4"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b5"
@@ -363,7 +363,7 @@
                 android:minHeight="40dip"
                 android:text="5"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b6"
@@ -374,7 +374,7 @@
                 android:minHeight="40dip"
                 android:text="6"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bMult"
@@ -385,7 +385,7 @@
                 android:minHeight="40dip"
                 android:text="*"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bRaiz"
@@ -396,7 +396,7 @@
                 android:minHeight="40dip"
                 android:text="⎷x"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bPower"
@@ -407,7 +407,7 @@
                 android:minHeight="40dip"
                 android:text="y^x"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bLog"
@@ -418,7 +418,7 @@
                 android:minHeight="40dip"
                 android:text="LOG"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bLN"
@@ -429,7 +429,7 @@
                 android:minHeight="40dip"
                 android:text="LN"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -446,7 +446,7 @@
                 android:minHeight="40dip"
                 android:text="1"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b2"
@@ -457,7 +457,7 @@
                 android:minHeight="40dip"
                 android:text="2"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/b3"
@@ -468,7 +468,7 @@
                 android:minHeight="40dip"
                 android:text="3"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bMenos"
@@ -479,7 +479,7 @@
                 android:minHeight="40dip"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bParalelo"
@@ -490,7 +490,7 @@
                 android:minHeight="40dip"
                 android:text="x || y"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bDivisor"
@@ -501,7 +501,7 @@
                 android:minHeight="40dip"
                 android:text="x/(x+y)"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bInv"
@@ -512,7 +512,7 @@
                 android:minHeight="40dip"
                 android:text="1/x"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bSwap"
@@ -523,7 +523,7 @@
                 android:minHeight="40dip"
                 android:text="SWAP"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
         </TableRow>
 
@@ -540,7 +540,7 @@
                 android:minHeight="40dip"
                 android:text="0"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bPunto"
@@ -551,7 +551,7 @@
                 android:minHeight="40dip"
                 android:text="."
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bPI"
@@ -562,7 +562,7 @@
                 android:minHeight="40dip"
                 android:text="PI"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bMas"
@@ -573,7 +573,7 @@
                 android:minHeight="40dip"
                 android:text="+"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bExp"
@@ -584,7 +584,7 @@
                 android:minHeight="40dip"
                 android:text="EEX"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bK_exp"
@@ -595,7 +595,7 @@
                 android:minHeight="40dip"
                 android:text="E+3"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bMili_exp"
@@ -606,7 +606,7 @@
                 android:minHeight="40dip"
                 android:text="E-3"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/bShift"
@@ -617,7 +617,7 @@
                 android:minHeight="40dip"
                 android:text="Shift"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </TableRow>
 
     </TableLayout>
