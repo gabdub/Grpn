@@ -9,8 +9,13 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **X//Y** = (X*Y)/(X+Y) = 2 resistors in parallel
 * **X/(X+Y)** = voltage divider
 * **2πF** = 2 * PI * frequency (the frequency is get from the **F** memory)
+* **/ ▶ %** = Y / X * 100
+* **%** = Y * X / 100
+* **- & +** = substract and add: y=(Y - X) | x=(Y + X)
+* **-/+ %** = substract and add a percent: y=(Y * (1 - X/100)) | x=(Y * (1 + X/100))
 * scientific notation with some tweaks...
 * **E+3** / **E-3** = add or subtract 3 from the exponent
+* **.0 to .9** = truncate X to N decimal places
 * polar to rectangular conversion
 * tabular key definition:
 
@@ -34,6 +39,12 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 
 
 **Some trigonometric functions:**
+
+* Angles in degrees
+* **DEG** = x * 180 / PI
+* **RAD** = x * PI / 180
+* **R ▶ P** = rectangular to polar (degrees)
+* **P ▶ R** = polar (degrees) to rectangular
 
 ![Trig layout](https://github.com/gabdub/Grpn/raw/master/screencapt/trig.jpg "TRIG layout")  ![SHIFT TRIG layout](https://github.com/gabdub/Grpn/raw/master/screencapt/trig_shift.jpg "SHIFT TRIG layout")
 
