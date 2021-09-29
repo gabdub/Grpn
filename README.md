@@ -14,9 +14,14 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * polar to rectangular conversion
 * tabular key definition:
 
-`    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}      });`
+`    \\option 1: method reference`
+`    calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);`
 
-`    calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, new Calc.action(){  public void doAction(){ calc.op_rect_polar();}  });`
+`    \\option 2: lambda`
+`    calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, () -> calc.op_kdiv(16.0));`
+
+`    \\option 3: new class`
+`    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}  });`
 
 **Default layout:**
 

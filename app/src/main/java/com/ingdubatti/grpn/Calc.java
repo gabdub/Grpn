@@ -49,13 +49,13 @@ class Calc {
         void doAction();
     }
 
-    private HashMap<Long,String>  hmKTxt = new HashMap<>(); //button text
-    private HashMap<Long,action>  hmKAct = new HashMap<>(); //button action
-    private HashMap<Long,Boolean> hmKHi  = new HashMap<>(); //button text highlight
-    private HashMap<Long,Long> hmKmap = new HashMap<>();    //button key mode mapping
-    private ArrayList<Integer> alModK = new ArrayList<Integer>();   //IDs of buttons with modifiers
+    private final HashMap<Long,String> hmKTxt = new HashMap<>(); //button text
+    private final HashMap<Long,action>  hmKAct = new HashMap<>(); //button action
+    private final HashMap<Long,Boolean> hmKHi  = new HashMap<>(); //button text highlight
+    private final HashMap<Long,Long> hmKmap = new HashMap<>();    //button key mode mapping
+    private final ArrayList<Integer> alModK = new ArrayList<>();   //IDs of buttons with modifiers
 
-    private MainActivity activity;
+    private final MainActivity activity;
 
     Calc(MainActivity activity) {
         this.activity= activity;
@@ -139,7 +139,7 @@ class Calc {
                                 if (mp.length > 1) d= mp[1];
                                 while (ex % 3 != 0) {
                                     if (!d.isEmpty()) {
-                                        r.append(d.substring(0, 1));
+                                        r.append(d.charAt(0));
                                         d = d.substring(1);
                                     }else{
                                         r.append('0');
@@ -208,6 +208,7 @@ class Calc {
     private void pushStack( double v) {
         if( stacklen >= MAXSTACK ){
             //the stack is full: drop the oldest value
+            //noinspection SuspiciousSystemArraycopy
             System.arraycopy(stack, 1, stack, 0, MAXSTACK - 1);
             stacklen= MAXSTACK-1;
         }
@@ -412,10 +413,7 @@ class Calc {
         if (!hmKTxt.containsKey(k0)) {
             //conecta una sola vez cada tecla con un evento generico
             bKey = activity.findViewById(keyid);
-            bKey.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) { onKeyClick(view); }
-            });
+            bKey.setOnClickListener(this::onKeyClick);
             //la primera definicion deberia ser NORMAL
             if (modif != NORMAL) {  //si no es, inserta una normal vacia
                 hmKTxt.put(k0,"");

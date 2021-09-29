@@ -20,7 +20,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private static final String PREFS_NAME = "GRPNPrefs";
 
-    private Calc calc= new Calc(this);
+    private final Calc calc= new Calc(this);
 
     void showInfo(String msg){
         Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
@@ -69,11 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private void showMenu() {
         PopupMenu p = new PopupMenu(MainActivity.this, findViewById(R.id.bMenu));
         p.getMenuInflater().inflate(R.menu.menu_main, p.getMenu());
-        p.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            public boolean onMenuItemClick(MenuItem item) {
-                return execMenuItem(item);
-            }
-        });
+        p.setOnMenuItemClickListener(this::execMenuItem);
         p.show();
     }
 
@@ -128,298 +124,120 @@ public class MainActivity extends AppCompatActivity {
 
         ////////////////// BUTTONS //////////////////
         /////---------modificadores----------
-        calc.defKey(R.id.bShift, Calc.NORMAL, "SHIFT", false, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.SHIFT, true);}
-        });
-        calc.defKey(R.id.bShift, Calc.SHIFT, "SHIFT", true, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.SHIFT, false);}
-        });
+        calc.defKey(R.id.bShift, Calc.NORMAL, "SHIFT", false, () -> calc.set_mode_flag(Calc.SHIFT, true));
+        calc.defKey(R.id.bShift, Calc.SHIFT, "SHIFT", true, () -> calc.set_mode_flag(Calc.SHIFT, false));
 
-        calc.defKey(R.id.bHex, Calc.NORMAL, "HEX", false, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.HEXA, true);}
-        });
-        calc.defKey(R.id.bHex, Calc.HEXA, "HEX", true, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.HEXA, false);}
-        });
+        calc.defKey(R.id.bHex, Calc.NORMAL, "HEX", false, () -> calc.set_mode_flag(Calc.HEXA, true));
+        calc.defKey(R.id.bHex, Calc.HEXA, "HEX", true, () -> calc.set_mode_flag(Calc.HEXA, false));
 
-        calc.defKey(R.id.bSwap, Calc.NORMAL, "SWAP", false, new Calc.action(){
-            public void doAction(){ calc.op_swap();}
-        });
-        calc.defKey(R.id.bSwap, Calc.SHIFT, "TRIG", false, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.TRIG, true);}
-        });
-        calc.defKey(R.id.bSwap, Calc.TRIG+Calc.SHIFT, "TRIG", true, new Calc.action(){
-            public void doAction(){ calc.set_mode_flag(Calc.TRIG, false);}
-        });
+        calc.defKey(R.id.bSwap, Calc.NORMAL, "SWAP", false, calc::op_swap);
+        calc.defKey(R.id.bSwap, Calc.SHIFT, "TRIG", false, () -> calc.set_mode_flag(Calc.TRIG, true));
+        calc.defKey(R.id.bSwap, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
 
         /////---------------------------
-        calc.defKey(R.id.b0, Calc.NORMAL, "0", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('0');}
-        });
-        calc.defKey(R.id.b0, Calc.SHIFT, ".0", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(0);}
-        });
-        calc.defKey(R.id.b1, Calc.NORMAL, "1", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('1');}
-        });
-        calc.defKey(R.id.b1, Calc.SHIFT, ".1", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(1);}
-        });
-        calc.defKey(R.id.b2, Calc.NORMAL, "2", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('2');}
-        });
-        calc.defKey(R.id.b2, Calc.SHIFT, ".2", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(2);}
-        });
-        calc.defKey(R.id.b3, Calc.NORMAL, "3", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('3');}
-        });
-        calc.defKey(R.id.b3, Calc.SHIFT, ".3", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(3);}
-        });
-        calc.defKey(R.id.b4, Calc.NORMAL, "4", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('4');}
-        });
-        calc.defKey(R.id.b4, Calc.SHIFT, ".4", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(4);}
-        });
-        calc.defKey(R.id.b5, Calc.NORMAL, "5", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('5');}
-        });
-        calc.defKey(R.id.b5, Calc.SHIFT, ".5", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(5);}
-        });
-        calc.defKey(R.id.b6, Calc.NORMAL, "6", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('6');}
-        });
-        calc.defKey(R.id.b6, Calc.SHIFT, ".6", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(6);}
-        });
-        calc.defKey(R.id.b7, Calc.NORMAL, "7", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('7');}
-        });
-        calc.defKey(R.id.b7, Calc.SHIFT, ".7", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(7);}
-        });
-        calc.defKey(R.id.b8, Calc.NORMAL, "8", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('8');}
-        });
-        calc.defKey(R.id.b8, Calc.SHIFT, ".8", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(8);}
-        });
-        calc.defKey(R.id.b9, Calc.NORMAL, "9", false, new Calc.action(){
-            public void doAction(){ calc.edit_append('9');}
-        });
-        calc.defKey(R.id.b9, Calc.SHIFT, ".9", false, new Calc.action(){
-            public void doAction(){ calc.op_limit_dec(9);}
-        });
+        calc.defKey(R.id.b0, Calc.NORMAL, "0", false, () -> calc.edit_append('0'));
+        calc.defKey(R.id.b0, Calc.SHIFT, ".0", false, () -> calc.op_limit_dec(0));
+        calc.defKey(R.id.b1, Calc.NORMAL, "1", false, () -> calc.edit_append('1'));
+        calc.defKey(R.id.b1, Calc.SHIFT, ".1", false, () -> calc.op_limit_dec(1));
+        calc.defKey(R.id.b2, Calc.NORMAL, "2", false, () -> calc.edit_append('2'));
+        calc.defKey(R.id.b2, Calc.SHIFT, ".2", false, () -> calc.op_limit_dec(2));
+        calc.defKey(R.id.b3, Calc.NORMAL, "3", false, () -> calc.edit_append('3'));
+        calc.defKey(R.id.b3, Calc.SHIFT, ".3", false, () -> calc.op_limit_dec(3));
+        calc.defKey(R.id.b4, Calc.NORMAL, "4", false, () -> calc.edit_append('4'));
+        calc.defKey(R.id.b4, Calc.SHIFT, ".4", false, () -> calc.op_limit_dec(4));
+        calc.defKey(R.id.b5, Calc.NORMAL, "5", false, () -> calc.edit_append('5'));
+        calc.defKey(R.id.b5, Calc.SHIFT, ".5", false, () -> calc.op_limit_dec(5));
+        calc.defKey(R.id.b6, Calc.NORMAL, "6", false, () -> calc.edit_append('6'));
+        calc.defKey(R.id.b6, Calc.SHIFT, ".6", false, () -> calc.op_limit_dec(6));
+        calc.defKey(R.id.b7, Calc.NORMAL, "7", false, () -> calc.edit_append('7'));
+        calc.defKey(R.id.b7, Calc.SHIFT, ".7", false, () -> calc.op_limit_dec(7));
+        calc.defKey(R.id.b8, Calc.NORMAL, "8", false, () -> calc.edit_append('8'));
+        calc.defKey(R.id.b8, Calc.SHIFT, ".8", false, () -> calc.op_limit_dec(8));
+        calc.defKey(R.id.b9, Calc.NORMAL, "9", false, () -> calc.edit_append('9'));
+        calc.defKey(R.id.b9, Calc.SHIFT, ".9", false, () -> calc.op_limit_dec(9));
 
-        calc.defKey(R.id.b_A, Calc.NORMAL, "A ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(0);}
-        });
-        calc.defKey(R.id.b_A, Calc.SHIFT, "▶ A", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(0);}
-        });
-        calc.defKey(R.id.b_A, Calc.HEXA, "A", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('A');}
-        });
-        calc.defKey(R.id.b_B, Calc.NORMAL, "B ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(1);}
-        });
-        calc.defKey(R.id.b_B, Calc.SHIFT, "▶ B", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(1);}
-        });
-        calc.defKey(R.id.b_B, Calc.HEXA, "B", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('B');}
-        });
-        calc.defKey(R.id.b_C, Calc.NORMAL, "C ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(2);}
-        });
-        calc.defKey(R.id.b_C, Calc.SHIFT, "▶ C", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(2);}
-        });
-        calc.defKey(R.id.b_C, Calc.HEXA, "C", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('C');}
-        });
-        calc.defKey(R.id.b_D, Calc.NORMAL, "D ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(3);}
-        });
-        calc.defKey(R.id.b_D, Calc.SHIFT, "▶ D", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(3);}
-        });
-        calc.defKey(R.id.b_D, Calc.HEXA, "D", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('D');}
-        });
-        calc.defKey(R.id.b_E, Calc.NORMAL, "E ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(4);}
-        });
-        calc.defKey(R.id.b_E, Calc.SHIFT, "▶ E", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(4);}
-        });
-        calc.defKey(R.id.b_E, Calc.HEXA, "E", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('E');}
-        });
-        calc.defKey(R.id.b_F, Calc.NORMAL, "F ▶", false, new Calc.action(){
-            public void doAction(){ calc.op_load_var(5);}
-        });
-        calc.defKey(R.id.b_F, Calc.SHIFT, "▶ F", false, new Calc.action(){
-            public void doAction(){ calc.op_store_var(5);}
-        });
-        calc.defKey(R.id.b_F, Calc.HEXA, "F", true, new Calc.action(){
-            public void doAction(){ calc.edit_append('F');}
-        });
+        calc.defKey(R.id.b_A, Calc.NORMAL, "A ▶", false, () -> calc.op_load_var(0));
+        calc.defKey(R.id.b_A, Calc.SHIFT, "▶ A", false, () -> calc.op_store_var(0));
+        calc.defKey(R.id.b_A, Calc.HEXA, "A", true, () -> calc.edit_append('A'));
+        calc.defKey(R.id.b_B, Calc.NORMAL, "B ▶", false, () -> calc.op_load_var(1));
+        calc.defKey(R.id.b_B, Calc.SHIFT, "▶ B", false, () -> calc.op_store_var(1));
+        calc.defKey(R.id.b_B, Calc.HEXA, "B", true, () -> calc.edit_append('B'));
+        calc.defKey(R.id.b_C, Calc.NORMAL, "C ▶", false, () -> calc.op_load_var(2));
+        calc.defKey(R.id.b_C, Calc.SHIFT, "▶ C", false, () -> calc.op_store_var(2));
+        calc.defKey(R.id.b_C, Calc.HEXA, "C", true, () -> calc.edit_append('C'));
+        calc.defKey(R.id.b_D, Calc.NORMAL, "D ▶", false, () -> calc.op_load_var(3));
+        calc.defKey(R.id.b_D, Calc.SHIFT, "▶ D", false, () -> calc.op_store_var(3));
+        calc.defKey(R.id.b_D, Calc.HEXA, "D", true, () -> calc.edit_append('D'));
+        calc.defKey(R.id.b_E, Calc.NORMAL, "E ▶", false, () -> calc.op_load_var(4));
+        calc.defKey(R.id.b_E, Calc.SHIFT, "▶ E", false, () -> calc.op_store_var(4));
+        calc.defKey(R.id.b_E, Calc.HEXA, "E", true, () -> calc.edit_append('E'));
+        calc.defKey(R.id.b_F, Calc.NORMAL, "F ▶", false, () -> calc.op_load_var(5));
+        calc.defKey(R.id.b_F, Calc.SHIFT, "▶ F", false, () -> calc.op_store_var(5));
+        calc.defKey(R.id.b_F, Calc.HEXA, "F", true, () -> calc.edit_append('F'));
 
-        calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){
-            public void doAction(){ calc.op_r_par();}
-        });
-        calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, new Calc.action(){
-            public void doAction(){ calc.op_rect_polar();}
-        });
+        calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, calc::op_r_par);
+        calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);
 
-        calc.defKey(R.id.bDivisor, Calc.NORMAL, "x/(x+y)", false, new Calc.action(){
-            public void doAction(){ calc.op_r_div();}
-        });
-        calc.defKey(R.id.bDivisor, Calc.SHIFT, "P ▶ R", false, new Calc.action(){
-            public void doAction(){ calc.op_polar_rect();}
-        });
+        calc.defKey(R.id.bDivisor, Calc.NORMAL, "x/(x+y)", false, calc::op_r_div);
+        calc.defKey(R.id.bDivisor, Calc.SHIFT, "P ▶ R", false, calc::op_polar_rect);
 
-        calc.defKey(R.id.bInv, Calc.NORMAL, "1/x", false, new Calc.action(){
-            public void doAction(){ calc.op_invert_x();}
-        });
+        calc.defKey(R.id.bInv, Calc.NORMAL, "1/x", false, calc::op_invert_x);
 
-        calc.defKey(R.id.bEnter, Calc.NORMAL, "ENTER", false, new Calc.action(){
-            public void doAction(){ calc.edit_enter();}
-        });
-        calc.defKey(R.id.bEnter, Calc.SHIFT, "EDIT", false, new Calc.action(){
-            public void doAction(){ calc.edit_x();}
-        });
+        calc.defKey(R.id.bEnter, Calc.NORMAL, "ENTER", false, calc::edit_enter);
+        calc.defKey(R.id.bEnter, Calc.SHIFT, "EDIT", false, calc::edit_x);
 
-        calc.defKey(R.id.bSigno, Calc.NORMAL, "+/-", false, new Calc.action(){
-            public void doAction(){ calc.edit_signo();}
-        });
+        calc.defKey(R.id.bSigno, Calc.NORMAL, "+/-", false, calc::edit_signo);
 
-        calc.defKey(R.id.bDelete, Calc.NORMAL, "DEL", false, new Calc.action(){
-            public void doAction(){ calc.edit_delete();}
-        });
-        calc.defKey(R.id.bDelete, Calc.SHIFT, "UNDO", false, new Calc.action(){
-            public void doAction(){ calc.edit_undo();}
-        });
+        calc.defKey(R.id.bDelete, Calc.NORMAL, "DEL", false, calc::edit_delete);
+        calc.defKey(R.id.bDelete, Calc.SHIFT, "UNDO", false, calc::edit_undo);
 
-        calc.defKey(R.id.bDiv, Calc.NORMAL, "/", false, new Calc.action(){
-            public void doAction(){ calc.op_div();}
-        });
-        calc.defKey(R.id.bDiv, Calc.SHIFT, "/ ▶ %", false, new Calc.action(){
-            public void doAction(){ calc.op_div_porc();}
-        });
+        calc.defKey(R.id.bDiv, Calc.NORMAL, "/", false, calc::op_div);
+        calc.defKey(R.id.bDiv, Calc.SHIFT, "/ ▶ %", false, calc::op_div_porc);
 
-        calc.defKey(R.id.bMult, Calc.NORMAL, "*", false, new Calc.action(){
-            public void doAction(){ calc.op_mult();}
-        });
-        calc.defKey(R.id.bMult, Calc.SHIFT, "%", false, new Calc.action(){
-            public void doAction(){ calc.op_porc();}
-        });
+        calc.defKey(R.id.bMult, Calc.NORMAL, "*", false, calc::op_mult);
+        calc.defKey(R.id.bMult, Calc.SHIFT, "%", false, calc::op_porc);
 
-        calc.defKey(R.id.bMenos, Calc.NORMAL, "-", false, new Calc.action(){
-            public void doAction(){ calc.op_sub();}
-        });
-        calc.defKey(R.id.bMenos, Calc.SHIFT, "- & +", false, new Calc.action(){
-            public void doAction(){ calc.op_sub_add();}
-        });
+        calc.defKey(R.id.bMenos, Calc.NORMAL, "-", false, calc::op_sub);
+        calc.defKey(R.id.bMenos, Calc.SHIFT, "- & +", false, calc::op_sub_add);
 
-        calc.defKey(R.id.bMas, Calc.NORMAL, "+", false, new Calc.action(){
-            public void doAction(){ calc.op_add();}
-        });
-        calc.defKey(R.id.bMas, Calc.SHIFT, "-/+ %", false, new Calc.action(){
-            public void doAction(){ calc.op_sub_add_porc();}
-        });
+        calc.defKey(R.id.bMas, Calc.NORMAL, "+", false, calc::op_add);
+        calc.defKey(R.id.bMas, Calc.SHIFT, "-/+ %", false, calc::op_sub_add_porc);
 
-        calc.defKey(R.id.bPunto, Calc.NORMAL, ".", false, new Calc.action(){
-            public void doAction(){ calc.edit_point();}
-        });
+        calc.defKey(R.id.bPunto, Calc.NORMAL, ".", false, calc::edit_point);
 
-        calc.defKey(R.id.bExp, Calc.NORMAL, "EEX", false, new Calc.action(){
-            public void doAction(){ calc.edit_exp();}
-        });
-        calc.defKey(R.id.bExp, Calc.HEXA,   "NOT", false, new Calc.action(){
-            public void doAction(){ calc.op_not();}
-        });
+        calc.defKey(R.id.bExp, Calc.NORMAL, "EEX", false, calc::edit_exp);
+        calc.defKey(R.id.bExp, Calc.HEXA,   "NOT", false, calc::op_not);
 
-        calc.defKey(R.id.bK_exp, Calc.NORMAL, "E+3", false, new Calc.action(){
-            public void doAction(){ calc.op_kmult(1000.0);}
-        });
-        calc.defKey(R.id.bK_exp, Calc.HEXA,   "<<4", false, new Calc.action(){
-            public void doAction(){ calc.op_kmult(16.0);}
-        });
+        calc.defKey(R.id.bK_exp, Calc.NORMAL, "E+3", false, () -> calc.op_kmult(1000.0));
+        calc.defKey(R.id.bK_exp, Calc.HEXA,   "<<4", false, () -> calc.op_kmult(16.0));
 
-        calc.defKey(R.id.bMili_exp, Calc.NORMAL, "E-3", false, new Calc.action(){
-            public void doAction(){ calc.op_kdiv(1000.0);}
-        });
-        calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, new Calc.action(){
-            public void doAction(){ calc.op_kdiv(16.0);}
-        });
+        calc.defKey(R.id.bMili_exp, Calc.NORMAL, "E-3", false, () -> calc.op_kdiv(1000.0));
+        calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, () -> calc.op_kdiv(16.0));
 
-        calc.defKey(R.id.bMenu, Calc.NORMAL, "...", false, new Calc.action(){
-            public void doAction(){ showMenu();}
-        });
+        calc.defKey(R.id.bMenu, Calc.NORMAL, "...", false, this::showMenu);
 
-        calc.defKey(R.id.bRaiz, Calc.NORMAL, "⎷x", false, new Calc.action(){
-            public void doAction(){ calc.op_sqrt();}
-        });
-        calc.defKey(R.id.bRaiz, Calc.SHIFT, "x^2", false, new Calc.action(){
-            public void doAction(){ calc.op_sq();}
-        });
-        calc.defKey(R.id.bRaiz, Calc.TRIG, "DEG", false, new Calc.action(){
-            public void doAction(){ calc.op_to_deg();}
-        });
-        calc.defKey(R.id.bRaiz, Calc.TRIG+Calc.SHIFT, "RAD", false, new Calc.action(){
-            public void doAction(){ calc.op_to_rad();}
-        });
+        calc.defKey(R.id.bRaiz, Calc.NORMAL, "⎷x", false, calc::op_sqrt);
+        calc.defKey(R.id.bRaiz, Calc.SHIFT, "x^2", false, calc::op_sq);
+        calc.defKey(R.id.bRaiz, Calc.TRIG, "DEG", false, calc::op_to_deg);
+        calc.defKey(R.id.bRaiz, Calc.TRIG+Calc.SHIFT, "RAD", false, calc::op_to_rad);
 
-        calc.defKey(R.id.bPower, Calc.NORMAL, "Y^X", false, new Calc.action(){
-            public void doAction(){ calc.op_pow();}
-        });
-        calc.defKey(R.id.bPower, Calc.SHIFT, "X⎷Y", false, new Calc.action(){
-            public void doAction(){ calc.op_n_sqrt();}
-        });
-        calc.defKey(R.id.bPower, Calc.TRIG, "SIN", false, new Calc.action(){
-            public void doAction(){ calc.op_sin();}
-        });
-        calc.defKey(R.id.bPower, Calc.TRIG+Calc.SHIFT, "ASIN", false, new Calc.action(){
-            public void doAction(){ calc.op_asin();}
-        });
+        calc.defKey(R.id.bPower, Calc.NORMAL, "Y^X", false, calc::op_pow);
+        calc.defKey(R.id.bPower, Calc.SHIFT, "X⎷Y", false, calc::op_n_sqrt);
+        calc.defKey(R.id.bPower, Calc.TRIG, "SIN", false, calc::op_sin);
+        calc.defKey(R.id.bPower, Calc.TRIG+Calc.SHIFT, "ASIN", false, calc::op_asin);
 
-        calc.defKey(R.id.bLog, Calc.NORMAL, "LOG", false, new Calc.action(){
-            public void doAction(){ calc.op_log10();}
-        });
-        calc.defKey(R.id.bLog, Calc.SHIFT, "10^X", false, new Calc.action(){
-            public void doAction(){ calc.op_pow10();}
-        });
-        calc.defKey(R.id.bLog, Calc.TRIG, "COS", false, new Calc.action(){
-            public void doAction(){ calc.op_cos();}
-        });
-        calc.defKey(R.id.bLog, Calc.TRIG+Calc.SHIFT, "ACOS", false, new Calc.action(){
-            public void doAction(){ calc.op_acos();}
-        });
+        calc.defKey(R.id.bLog, Calc.NORMAL, "LOG", false, calc::op_log10);
+        calc.defKey(R.id.bLog, Calc.SHIFT, "10^X", false, calc::op_pow10);
+        calc.defKey(R.id.bLog, Calc.TRIG, "COS", false, calc::op_cos);
+        calc.defKey(R.id.bLog, Calc.TRIG+Calc.SHIFT, "ACOS", false, calc::op_acos);
 
-        calc.defKey(R.id.bLN, Calc.NORMAL, "LN", false, new Calc.action(){
-            public void doAction(){ calc.op_ln();}
-        });
-        calc.defKey(R.id.bLN, Calc.SHIFT, "E^X", false, new Calc.action(){
-            public void doAction(){ calc.op_exp();}
-        });
-        calc.defKey(R.id.bLN, Calc.TRIG, "TAN", false, new Calc.action(){
-            public void doAction(){ calc.op_tan();}
-        });
-        calc.defKey(R.id.bLN, Calc.TRIG+Calc.SHIFT, "ATAN", false, new Calc.action(){
-            public void doAction(){ calc.op_atan();}
-        });
+        calc.defKey(R.id.bLN, Calc.NORMAL, "LN", false, calc::op_ln);
+        calc.defKey(R.id.bLN, Calc.SHIFT, "E^X", false, calc::op_exp);
+        calc.defKey(R.id.bLN, Calc.TRIG, "TAN", false, calc::op_tan);
+        calc.defKey(R.id.bLN, Calc.TRIG+Calc.SHIFT, "ATAN", false, calc::op_atan);
 
-        calc.defKey(R.id.bPI, Calc.NORMAL, "PI", false, new Calc.action(){
-            public void doAction(){ calc.op_pi();}
-        });
-        calc.defKey(R.id.bPI, Calc.SHIFT, "2πF", false, new Calc.action(){
-            public void doAction(){ calc.op_2piF();}
-        });
+        calc.defKey(R.id.bPI, Calc.NORMAL, "PI", false, calc::op_pi);
+        calc.defKey(R.id.bPI, Calc.SHIFT, "2πF", false, calc::op_2piF);
 
         //update interface
         calc.updateMode();
