@@ -156,15 +156,18 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b9, Calc.NORMAL, "9", false, () -> calc.edit_append('9'));
         calc.defKey(R.id.b9, Calc.SHIFT, ".9", false, () -> calc.op_limit_dec(9));
 
-        calc.defKey(R.id.b_A, Calc.NORMAL, "A ▶", false, () -> calc.op_load_var(0));
-        calc.defKey(R.id.b_A, Calc.SHIFT, "▶ A", false, () -> calc.op_store_var(0));
-        calc.defKey(R.id.b_A, Calc.HEXA, "A", true, () -> calc.edit_append('A'));
-        calc.defKey(R.id.b_B, Calc.NORMAL, "B ▶", false, () -> calc.op_load_var(1));
-        calc.defKey(R.id.b_B, Calc.SHIFT, "▶ B", false, () -> calc.op_store_var(1));
-        calc.defKey(R.id.b_B, Calc.HEXA, "B", true, () -> calc.edit_append('B'));
-        calc.defKey(R.id.b_C, Calc.NORMAL, "C ▶", false, () -> calc.op_load_var(2));
-        calc.defKey(R.id.b_C, Calc.SHIFT, "▶ C", false, () -> calc.op_store_var(2));
-        calc.defKey(R.id.b_C, Calc.HEXA, "C", true, () -> calc.edit_append('C'));
+        calc.defKey(R.id.b_A, Calc.NORMAL, "    A ▶    ", false, () -> calc.op_load_var(0));
+        calc.defKey(R.id.b_A, Calc.SHIFT, "    ▶ A    ", false, () -> calc.op_store_var(0));
+        calc.defKey(R.id.b_A, Calc.HEXA, "       A      ", true, () -> calc.edit_append('A'));
+        calc.defKey(R.id.b_B, Calc.NORMAL, "    B ▶    ", false, () -> calc.op_load_var(1));
+        calc.defKey(R.id.b_B, Calc.SHIFT, "    ▶ B    ", false, () -> calc.op_store_var(1));
+        calc.defKey(R.id.b_B, Calc.HEXA, "       B      ", true, () -> calc.edit_append('B'));
+        calc.defKey(R.id.b_C, Calc.NORMAL, "    C ▶    ", false, () -> calc.op_load_var(2));
+        calc.defKey(R.id.b_C, Calc.SHIFT, "    ▶ C    ", false, () -> calc.op_store_var(2));
+        calc.defKey(R.id.b_C, Calc.HEXA, "       C      ", true, () -> calc.edit_append('C'));
+
+        calc.defKey(R.id.bMenu, Calc.NORMAL, "     ...     ", false, this::showMenu);
+
         calc.defKey(R.id.b_D, Calc.NORMAL, "D ▶", false, () -> calc.op_load_var(3));
         calc.defKey(R.id.b_D, Calc.SHIFT, "▶ D", false, () -> calc.op_store_var(3));
         calc.defKey(R.id.b_D, Calc.HEXA, "D", true, () -> calc.edit_append('D'));
@@ -213,8 +216,6 @@ public class MainActivity extends AppCompatActivity {
 
         calc.defKey(R.id.bMili_exp, Calc.NORMAL, "E-3", false, () -> calc.op_kdiv(1000.0));
         calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, () -> calc.op_kdiv(16.0));
-
-        calc.defKey(R.id.bMenu, Calc.NORMAL, "...", false, this::showMenu);
 
         calc.defKey(R.id.bRaiz, Calc.NORMAL, "⎷x", false, calc::op_sqrt);
         calc.defKey(R.id.bRaiz, Calc.SHIFT, "x^2", false, calc::op_sq);

@@ -26,6 +26,7 @@
 
             <Button
                 android:id="@+id/b_A"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -35,6 +36,7 @@
 
             <Button
                 android:id="@+id/b_B"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -44,6 +46,7 @@
 
             <Button
                 android:id="@+id/b_C"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -53,6 +56,7 @@
 
             <Button
                 android:id="@+id/bMenu"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -67,6 +71,7 @@
 
             <Button
                 android:id="@+id/b_D"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -76,6 +81,7 @@
 
             <Button
                 android:id="@+id/b_E"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -85,6 +91,7 @@
 
             <Button
                 android:id="@+id/b_F"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -94,6 +101,7 @@
 
             <Button
                 android:id="@+id/bHex"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -108,6 +116,7 @@
 
             <Button
                 android:id="@+id/bRaiz"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -117,6 +126,7 @@
 
             <Button
                 android:id="@+id/bPower"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -126,15 +136,17 @@
 
             <Button
                 android:id="@+id/bLog"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="LOG"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bLN"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -149,6 +161,7 @@
 
             <Button
                 android:id="@+id/bParalelo"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -158,6 +171,7 @@
 
             <Button
                 android:id="@+id/bDivisor"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -167,6 +181,7 @@
 
             <Button
                 android:id="@+id/bInv"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -176,6 +191,7 @@
 
             <Button
                 android:id="@+id/bSwap"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
@@ -191,6 +207,7 @@
 
             <Button
                 android:id="@+id/bEnter"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
@@ -201,6 +218,7 @@
 
             <Button
                 android:id="@+id/bSigno"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
@@ -210,6 +228,7 @@
 
             <Button
                 android:id="@+id/bDelete"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F8BBD0"
@@ -224,6 +243,7 @@
 
             <Button
                 android:id="@+id/b7"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -233,6 +253,7 @@
 
             <Button
                 android:id="@+id/b8"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -242,6 +263,7 @@
 
             <Button
                 android:id="@+id/b9"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -251,6 +273,7 @@
 
             <Button
                 android:id="@+id/bDiv"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
@@ -265,6 +288,7 @@
 
             <Button
                 android:id="@+id/b4"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -274,6 +298,7 @@
 
             <Button
                 android:id="@+id/b5"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -283,6 +308,7 @@
 
             <Button
                 android:id="@+id/b6"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -292,6 +318,7 @@
 
             <Button
                 android:id="@+id/bMult"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
@@ -306,6 +333,7 @@
 
             <Button
                 android:id="@+id/b1"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -315,6 +343,7 @@
 
             <Button
                 android:id="@+id/b2"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -324,6 +353,7 @@
 
             <Button
                 android:id="@+id/b3"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -333,6 +363,7 @@
 
             <Button
                 android:id="@+id/bMenos"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
@@ -347,6 +378,7 @@
 
             <Button
                 android:id="@+id/b0"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -356,6 +388,7 @@
 
             <Button
                 android:id="@+id/bPunto"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
@@ -365,15 +398,17 @@
 
             <Button
                 android:id="@+id/bPI"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FCE4EC"
                 android:text="PI"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bMas"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
@@ -388,28 +423,31 @@
 
             <Button
                 android:id="@+id/bExp"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="EEX"
+                android:text="    EEX    "
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bK_exp"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="E+3"
+                android:text="   E+3   "
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
             <Button
                 android:id="@+id/bMili_exp"
+                style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="E-3"
+                android:text="     E-3     "
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -418,7 +456,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
-                android:text="Shift"
+                android:text="  SHIFT  "
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
         </TableRow>
