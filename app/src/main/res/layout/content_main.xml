@@ -115,7 +115,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/bRaiz"
+                android:id="@+id/bSquare_deg"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,7 +125,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bPower"
+                android:id="@+id/bPower_sin"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bLog"
+                android:id="@+id/bLog_cos"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bLN"
+                android:id="@+id/bLn_tan"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

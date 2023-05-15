@@ -388,7 +388,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/bRaiz"
+                android:id="@+id/bSquare_deg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -399,7 +399,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/bPower"
+                android:id="@+id/bPower_sin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -410,7 +410,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/bLog"
+                android:id="@+id/bLog_cos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
@@ -421,7 +421,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/bLN"
+                android:id="@+id/bLn_tan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
