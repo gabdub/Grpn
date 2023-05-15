@@ -408,11 +408,16 @@ class Calc {
     //Key definition
     void defKey(int keyid, int modif, String txt, boolean hilight, action act ) {
         Button bKey;
+
+        bKey = activity.findViewById(keyid);
+        if( bKey == null ){
+          return; //ignorar si el layout no usa esta tecla
+        }
+
         long k0= (long) keyid * _KEY_MULT;
         long k=  k0 + modif;
         if (!hmKTxt.containsKey(k0)) {
             //conecta una sola vez cada tecla con un evento generico
-            bKey = activity.findViewById(keyid);
             bKey.setOnClickListener(this::onKeyClick);
             //la primera definicion deberia ser NORMAL
             if (modif != NORMAL) {  //si no es, inserta una normal vacia

@@ -115,7 +115,52 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/bSquare_deg"
+                android:id="@+id/bDeg"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCDD2"
+                android:text="DEG"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/bSin"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCDD2"
+                android:text="SIN"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/bCos"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCDD2"
+                android:text="COS"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/bTan"
+                style="@android:style/Widget.DeviceDefault.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFCDD2"
+                android:text="TAN"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bSquare"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -125,7 +170,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bPower_sin"
+                android:id="@+id/bPower"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +180,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bLog_cos"
+                android:id="@+id/bLog"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,7 +190,7 @@
                 android:textSize="15sp" />
 
             <Button
-                android:id="@+id/bLn_tan"
+                android:id="@+id/bLn"
                 style="@android:style/Widget.DeviceDefault.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -427,7 +472,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="    EEX    "
+                android:text="EEX"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -437,7 +482,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="   E+3   "
+                android:text="E+3"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -447,7 +492,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
-                android:text="     E-3     "
+                android:text="E-3"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
 
@@ -456,7 +501,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
-                android:text="  SHIFT  "
+                android:text="SHIFT"
                 android:textColor="@android:color/black"
                 android:textSize="15sp" />
         </TableRow>
