@@ -633,6 +633,15 @@ class Calc {
         }
     }
 
+    void op_roll() {            //"ROLL" x y z
+        if( getOpArgs_NO_UNDO(3) ){
+            double stack_z= popX();
+            pushStack(stack_y);
+            pushStack(stack_x);
+            pushStack(stack_z);
+        }
+    }
+
     void op_rect_polar() {      //"R ▶ P" (DEG)
         if( getOpArgs(2) ){
             pushStack( Math.sqrt( stack_x*stack_x + stack_y*stack_y) );

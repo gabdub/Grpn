@@ -130,9 +130,15 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bHex, Calc.NORMAL, "HEX", false, () -> calc.set_mode_flag(Calc.HEXA, true));
         calc.defKey(R.id.bHex, Calc.HEXA, "HEX", true, () -> calc.set_mode_flag(Calc.HEXA, false));
 
-        calc.defKey(R.id.bSwap, Calc.NORMAL, "SWAP", false, calc::op_swap);
-        calc.defKey(R.id.bSwap, Calc.SHIFT, "TRIG", false, () -> calc.set_mode_flag(Calc.TRIG, true));
-        calc.defKey(R.id.bSwap, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
+        //---------- with TRIG mode (1 row) -------------
+        calc.defKey(R.id.bSwap_trig, Calc.NORMAL, "SWAP", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_trig, Calc.SHIFT, "TRIG", false, () -> calc.set_mode_flag(Calc.TRIG, true));
+        calc.defKey(R.id.bSwap_trig, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
+        //---------- without TRIG mode (2 rows) -------------
+        calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "SWAP", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_roll, Calc.SHIFT, "ROLL", false, calc::op_roll);
+        //----------------------------------
+        
 
         /////---------------------------
         calc.defKey(R.id.b0, Calc.NORMAL, "0", false, () -> calc.edit_append('0'));
