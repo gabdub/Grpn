@@ -35,6 +35,7 @@ class Calc {
     int stacklen= 0;
     private double stack_x; //op arguments
     private double stack_y;
+    private double stack_z;
 
     final double[] vars= new double[MAXVARS];
 
@@ -42,7 +43,8 @@ class Calc {
 
     double undoX= 0;
     double undoY= 0;
-    int undoN= 0; //0=no hay, 1=X, 2=X-Y
+    double undoZ= 0;
+    int undoN= 0; //0=no hay, 1=X, 2=XY, 3=XYZ
     private boolean stack_change= false;
 
     public interface action {
@@ -301,22 +303,24 @@ class Calc {
         }
     }
 
-    private boolean getOpArgs_NO_UNDO(int n) {  //get stack_x/y
+    private boolean getOpArgs_NO_UNDO(int n) {  //get stack_x/y/z
         if( finEdit() ) {       //termina edicion en curso (fuerza update del stack al terminar la accion)
             if(stacklen >= n) {
                 if (n >= 1) stack_x= popX();    //pop X argument
                 if (n >= 2) stack_y= popX();    //pop Y argument
+                if (n >= 3) stack_z= popX();    //pop Z argument
                 return true;    //OK: hay argumentos suficientes
             }
         }
         return false;           //error en input o faltan argumentos
     }
 
-    private boolean getOpArgs(int n) {  //get stack_x/y (SAVE then for UNDO)
+    private boolean getOpArgs(int n) {  //get stack_x/y/z (SAVE then for UNDO)
         if( getOpArgs_NO_UNDO(n) ) {
             undoN= n;           //salva undo de argumentos
             undoX = stack_x;
             undoY = stack_y;
+            undoZ = stack_z;
             return true;        //OK: hay argumentos suficientes
         }
         return false;           //error en input o faltan argumentos
@@ -524,6 +528,9 @@ class Calc {
             stacklen--;         //quita el 0
             editando = false;
         }else{                  //recupera argumentos de la ultima OP
+            if (undoN > 2) {
+                pushStack(undoZ);
+            }
             if (undoN > 1) {
                 pushStack(undoY);
             }
@@ -633,12 +640,19 @@ class Calc {
         }
     }
 
-    void op_roll() {            //"ROLL" x y z
+    void op_roll_yxz() {            //"ROLL" z y x => y x z "Z ▶"
         if( getOpArgs_NO_UNDO(3) ){
-            double stack_z= popX();
             pushStack(stack_y);
             pushStack(stack_x);
             pushStack(stack_z);
+        }
+    }
+
+    void op_roll_xzy() {            //"ROLL" z y x => x z y "▶ Z"
+        if( getOpArgs_NO_UNDO(3) ){
+            pushStack(stack_x);
+            pushStack(stack_z);
+            pushStack(stack_y);
         }
     }
 

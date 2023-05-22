@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         calc.undoN= settings.getInt("undoN", 0);
         calc.undoX= loadCfgDbl(settings, "undoX", 0.0 );
         calc.undoY= loadCfgDbl(settings, "undoY", 0.0 );
+        calc.undoZ= loadCfgDbl(settings, "undoZ", 0.0 );
 
         ////////////////// BUTTONS //////////////////
         /////---------modificadores----------
@@ -136,9 +137,9 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bSwap_trig, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
         //---------- without TRIG mode (2 rows) -------------
         calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "SWAP", false, calc::op_swap);
-        calc.defKey(R.id.bSwap_roll, Calc.SHIFT, "ROLL", false, calc::op_roll);
+        calc.defKey(R.id.bSwap_roll, Calc.SHIFT, "▶ Z", false, calc::op_roll_xzy);
         //----------------------------------
-        
+
 
         /////---------------------------
         calc.defKey(R.id.b0, Calc.NORMAL, "0", false, () -> calc.edit_append('0'));
@@ -191,6 +192,7 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bDivisor, Calc.SHIFT, "P ▶ R", false, calc::op_polar_rect);
 
         calc.defKey(R.id.bInv, Calc.NORMAL, "1/x", false, calc::op_invert_x);
+        calc.defKey(R.id.bInv, Calc.SHIFT, "Z ▶", false, calc::op_roll_yxz);
 
         calc.defKey(R.id.bEnter, Calc.NORMAL, "ENTER", false, calc::edit_enter);
         calc.defKey(R.id.bEnter, Calc.SHIFT, "EDIT", false, calc::edit_x);
@@ -253,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bLog,    Calc.SHIFT,  "10^X", false, calc::op_pow10);
         calc.defKey(R.id.bLn,     Calc.NORMAL, "LN",   false, calc::op_ln);
         calc.defKey(R.id.bLn,     Calc.SHIFT,  "E^X",  false, calc::op_exp);
-        
+
         calc.defKey(R.id.bDeg, Calc.NORMAL, "DEG",  false, calc::op_to_deg);
         calc.defKey(R.id.bDeg, Calc.SHIFT,  "RAD",  false, calc::op_to_rad);
         calc.defKey(R.id.bSin, Calc.NORMAL, "SIN",  false, calc::op_sin);
@@ -317,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("undoN", calc.undoN);
         editor.putString("undoX", Double.toString(calc.undoX));
         editor.putString("undoY", Double.toString(calc.undoY));
+        editor.putString("undoZ", Double.toString(calc.undoZ));
         editor.apply();
     }
 }
