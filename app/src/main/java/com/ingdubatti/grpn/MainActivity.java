@@ -185,6 +185,9 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b_F, Calc.SHIFT, "▶ F", false, () -> calc.op_store_var(5));
         calc.defKey(R.id.b_F, Calc.HEXA, "F", true, () -> calc.edit_append('F'));
 
+        calc.defKey(R.id.b_f8, Calc.NORMAL, "VF", false, calc::op_exp3_vf);
+        calc.defKey(R.id.b_f8, Calc.SHIFT, "τ", false, calc::op_exp3_tao);
+
         calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, calc::op_r_par);
         calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);
 

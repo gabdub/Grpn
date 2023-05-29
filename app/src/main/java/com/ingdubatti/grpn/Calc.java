@@ -845,4 +845,38 @@ class Calc {
             replaceX( readX() / k );
         }
     }
+
+    void op_exp3_vf() { // z=initial, y= middle, x= last value (ty-tz = tx-ty) => negative exponential final value
+        if( getOpArgs(3) ){
+            double d1= stack_y - stack_z;
+            double d2= stack_x - stack_z;
+            if( (d1 > 0) && (d2 > d1) && (d1 > d2/2) ){
+                double amp = d1 * d1 / (2 * stack_y - stack_z - stack_x);
+                pushStack(stack_z + amp);   //final value= initial value + amplitude
+            }else if( d1 < 0 ){
+                d1= -d1;
+                d2= -d2;
+                if( (d2 > d1) && (d1 > d2/2) ){
+                    double amp = d1 * d1 / (2 * stack_y - stack_z - stack_x);
+                    pushStack(stack_z + amp);   //final value= initial value + amplitude
+                }
+            }
+        }
+    }
+
+    void op_exp3_tao() {  // z=initial, y= middle, x= last value (ty-tz = tx-ty) => negative exponential tao / (ty-tz)
+        if( getOpArgs(3) ){
+            double d1= stack_y - stack_z;
+            double d2= stack_x - stack_z;
+            if( (d1 > 0) && (d2 > d1) && (d1 > d2/2) ){
+                pushStack(1 / Math.log(d1/(d2-d1)) );   //tao / (ty-tz)
+            }else if( d1 < 0 ){
+                d1= -d1;
+                d2= -d2;
+                if( (d2 > d1) && (d1 > d2/2) ){
+                    pushStack(1 / Math.log(d1/(d2-d1)) );   //tao / (ty-tz)
+                }
+            }
+        }
+    }
 }
