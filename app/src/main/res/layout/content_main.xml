@@ -32,37 +32,37 @@
                 android:backgroundTint="#F3E5F5"
                 android:text="[A]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_B"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="[B]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_C"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="[C]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMenu"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="..."
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -71,43 +71,43 @@
 
             <Button
                 android:id="@+id/b_D"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="[D]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_E"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="[E]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_F"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="[F]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bHex"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="HEX"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -122,37 +122,37 @@
                 android:backgroundTint="#E6E6E6"
                 android:text="[F1]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f2"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F2]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f3"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F3]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f4"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F4]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -167,37 +167,37 @@
                 android:backgroundTint="#E6E6E6"
                 android:text="[F5]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f6"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F6]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f7"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F7]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b_f8"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="[F8]"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -206,43 +206,43 @@
 
             <Button
                 android:id="@+id/bDeg"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="DEG"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bSin"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="SIN"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bCos"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="COS"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bTan"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="TAN"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -251,43 +251,43 @@
 
             <Button
                 android:id="@+id/bSquare"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="⎷x"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPower"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="y^x"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bLog"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="LOG"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bLn"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="LN"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -296,43 +296,43 @@
 
             <Button
                 android:id="@+id/bParalelo"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="x || y"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDivisor"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="x/(x+y)"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bInv"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFCDD2"
                 android:text="1/x"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bSwap_roll"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="SWAP"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -342,34 +342,34 @@
 
             <Button
                 android:id="@+id/bEnter"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:backgroundTint="#C5E1A5"
                 android:text="ENTER"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bSigno"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
                 android:text="+/-"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDelete"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F8BBD0"
                 android:text="DEL"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -378,43 +378,43 @@
 
             <Button
                 android:id="@+id/b7"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="7"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b8"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="8"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b9"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="9"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bDiv"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
                 android:text="/"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -423,43 +423,43 @@
 
             <Button
                 android:id="@+id/b4"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="4"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b5"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="5"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b6"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="6"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMult"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
                 android:text="*"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -468,43 +468,43 @@
 
             <Button
                 android:id="@+id/b1"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="1"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b2"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="2"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/b3"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="3"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMenos"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
                 android:text="-"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -513,43 +513,43 @@
 
             <Button
                 android:id="@+id/b0"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="0"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPunto"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
                 android:text="."
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bPI"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FCE4EC"
                 android:text="PI"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMas"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFECB3"
                 android:text="+"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
 
         <TableRow
@@ -558,42 +558,43 @@
 
             <Button
                 android:id="@+id/bExp"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
                 android:text="EEX"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bK_exp"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
                 android:text="E+3"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bMili_exp"
-                style="@android:style/Widget.DeviceDefault.Button"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#FFF3E0"
                 android:text="E-3"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/bShift"
+                style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#F3E5F5"
                 android:text="SHIFT"
                 android:textColor="@android:color/black"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
         </TableRow>
     </TableLayout>
 
@@ -629,7 +630,8 @@
             android:textAlignment="textEnd"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
     </TableRow>
 
     <TableRow

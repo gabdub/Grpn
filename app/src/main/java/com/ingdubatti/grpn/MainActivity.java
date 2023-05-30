@@ -132,11 +132,11 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bHex, Calc.HEXA, "HEX", true, () -> calc.set_mode_flag(Calc.HEXA, false));
 
         //---------- with TRIG mode (1 row) -------------
-        calc.defKey(R.id.bSwap_trig, Calc.NORMAL, "SWAP", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_trig, Calc.NORMAL, "Swap", false, calc::op_swap);
         calc.defKey(R.id.bSwap_trig, Calc.SHIFT, "TRIG", false, () -> calc.set_mode_flag(Calc.TRIG, true));
         calc.defKey(R.id.bSwap_trig, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
         //---------- without TRIG mode (2 rows) -------------
-        calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "SWAP", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "Swap", false, calc::op_swap);
         calc.defKey(R.id.bSwap_roll, Calc.SHIFT, "▶ Z", false, calc::op_roll_xzy);
         //----------------------------------
 
@@ -163,17 +163,17 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b9, Calc.NORMAL, "9", false, () -> calc.edit_append('9'));
         calc.defKey(R.id.b9, Calc.SHIFT, ".9", false, () -> calc.op_limit_dec(9));
 
-        calc.defKey(R.id.b_A, Calc.NORMAL, "    A ▶    ", false, () -> calc.op_load_var(0));
-        calc.defKey(R.id.b_A, Calc.SHIFT, "    ▶ A    ", false, () -> calc.op_store_var(0));
-        calc.defKey(R.id.b_A, Calc.HEXA, "       A      ", true, () -> calc.edit_append('A'));
-        calc.defKey(R.id.b_B, Calc.NORMAL, "    B ▶    ", false, () -> calc.op_load_var(1));
-        calc.defKey(R.id.b_B, Calc.SHIFT, "    ▶ B    ", false, () -> calc.op_store_var(1));
-        calc.defKey(R.id.b_B, Calc.HEXA, "       B      ", true, () -> calc.edit_append('B'));
-        calc.defKey(R.id.b_C, Calc.NORMAL, "    C ▶    ", false, () -> calc.op_load_var(2));
-        calc.defKey(R.id.b_C, Calc.SHIFT, "    ▶ C    ", false, () -> calc.op_store_var(2));
-        calc.defKey(R.id.b_C, Calc.HEXA, "       C      ", true, () -> calc.edit_append('C'));
+        calc.defKey(R.id.b_A, Calc.NORMAL, "    A ▶   ", false, () -> calc.op_load_var(0));
+        calc.defKey(R.id.b_A, Calc.SHIFT, "    ▶ A   ", false, () -> calc.op_store_var(0));
+        calc.defKey(R.id.b_A, Calc.HEXA, "      A      ", true, () -> calc.edit_append('A'));
+        calc.defKey(R.id.b_B, Calc.NORMAL, "    B ▶   ", false, () -> calc.op_load_var(1));
+        calc.defKey(R.id.b_B, Calc.SHIFT, "    ▶ B   ", false, () -> calc.op_store_var(1));
+        calc.defKey(R.id.b_B, Calc.HEXA, "      B      ", true, () -> calc.edit_append('B'));
+        calc.defKey(R.id.b_C, Calc.NORMAL, "    C ▶   ", false, () -> calc.op_load_var(2));
+        calc.defKey(R.id.b_C, Calc.SHIFT, "    ▶ C   ", false, () -> calc.op_store_var(2));
+        calc.defKey(R.id.b_C, Calc.HEXA, "      C      ", true, () -> calc.edit_append('C'));
 
-        calc.defKey(R.id.bMenu, Calc.NORMAL, "     ...     ", false, this::showMenu);
+        calc.defKey(R.id.bMenu, Calc.NORMAL, "      ...      ", false, this::showMenu);
 
         calc.defKey(R.id.b_D, Calc.NORMAL, "D ▶", false, () -> calc.op_load_var(3));
         calc.defKey(R.id.b_D, Calc.SHIFT, "▶ D", false, () -> calc.op_store_var(3));
@@ -185,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b_F, Calc.SHIFT, "▶ F", false, () -> calc.op_store_var(5));
         calc.defKey(R.id.b_F, Calc.HEXA, "F", true, () -> calc.edit_append('F'));
 
-        calc.defKey(R.id.b_f8, Calc.NORMAL, "VF", false, calc::op_exp3_vf);
+        calc.defKey(R.id.b_f8, Calc.NORMAL, "Vf", false, calc::op_exp3_vf);
         calc.defKey(R.id.b_f8, Calc.SHIFT, "τ", false, calc::op_exp3_tao);
 
         calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, calc::op_r_par);
@@ -197,13 +197,13 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bInv, Calc.NORMAL, "1/x", false, calc::op_invert_x);
         calc.defKey(R.id.bInv, Calc.SHIFT, "Z ▶", false, calc::op_roll_yxz);
 
-        calc.defKey(R.id.bEnter, Calc.NORMAL, "ENTER", false, calc::edit_enter);
-        calc.defKey(R.id.bEnter, Calc.SHIFT, "EDIT", false, calc::edit_x);
+        calc.defKey(R.id.bEnter, Calc.NORMAL, "Enter", false, calc::edit_enter);
+        calc.defKey(R.id.bEnter, Calc.SHIFT, "Edit", false, calc::edit_x);
 
         calc.defKey(R.id.bSigno, Calc.NORMAL, "+/-", false, calc::edit_signo);
 
-        calc.defKey(R.id.bDelete, Calc.NORMAL, "DEL", false, calc::edit_delete);
-        calc.defKey(R.id.bDelete, Calc.SHIFT, "UNDO", false, calc::edit_undo);
+        calc.defKey(R.id.bDelete, Calc.NORMAL, "Del", false, calc::edit_delete);
+        calc.defKey(R.id.bDelete, Calc.SHIFT, "Undo", false, calc::edit_undo);
 
         calc.defKey(R.id.bDiv, Calc.NORMAL, "/", false, calc::op_div);
         calc.defKey(R.id.bDiv, Calc.SHIFT, "/ ▶ %", false, calc::op_div_porc);
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bPunto, Calc.NORMAL, ".", false, calc::edit_point);
 
         calc.defKey(R.id.bExp, Calc.NORMAL, "EEX", false, calc::edit_exp);
-        calc.defKey(R.id.bExp, Calc.HEXA,   "NOT", false, calc::op_not);
+        calc.defKey(R.id.bExp, Calc.HEXA,   "Not", false, calc::op_not);
 
         calc.defKey(R.id.bK_exp, Calc.NORMAL, "E+3", false, () -> calc.op_kmult(1000.0));
         calc.defKey(R.id.bK_exp, Calc.HEXA,   "<<4", false, () -> calc.op_kmult(16.0));
@@ -231,45 +231,45 @@ public class MainActivity extends AppCompatActivity {
         //---------- with TRIG mode (1 row) -------------
         calc.defKey(R.id.bSquare_deg, Calc.NORMAL, "⎷x", false, calc::op_sqrt);
         calc.defKey(R.id.bSquare_deg, Calc.SHIFT, "x^2", false, calc::op_sq);
-        calc.defKey(R.id.bSquare_deg, Calc.TRIG, "DEG", false, calc::op_to_deg);
-        calc.defKey(R.id.bSquare_deg, Calc.TRIG+Calc.SHIFT, "RAD", false, calc::op_to_rad);
+        calc.defKey(R.id.bSquare_deg, Calc.TRIG, "Deg", false, calc::op_to_deg);
+        calc.defKey(R.id.bSquare_deg, Calc.TRIG+Calc.SHIFT, "Rad", false, calc::op_to_rad);
 
-        calc.defKey(R.id.bPower_sin, Calc.NORMAL, "Y^X", false, calc::op_pow);
-        calc.defKey(R.id.bPower_sin, Calc.SHIFT, "X⎷Y", false, calc::op_n_sqrt);
-        calc.defKey(R.id.bPower_sin, Calc.TRIG, "SIN", false, calc::op_sin);
-        calc.defKey(R.id.bPower_sin, Calc.TRIG+Calc.SHIFT, "ASIN", false, calc::op_asin);
+        calc.defKey(R.id.bPower_sin, Calc.NORMAL, "y^x", false, calc::op_pow);
+        calc.defKey(R.id.bPower_sin, Calc.SHIFT, "x⎷y", false, calc::op_n_sqrt);
+        calc.defKey(R.id.bPower_sin, Calc.TRIG, "Sin", false, calc::op_sin);
+        calc.defKey(R.id.bPower_sin, Calc.TRIG+Calc.SHIFT, "ASin", false, calc::op_asin);
 
-        calc.defKey(R.id.bLog_cos, Calc.NORMAL, "LOG", false, calc::op_log10);
-        calc.defKey(R.id.bLog_cos, Calc.SHIFT, "10^X", false, calc::op_pow10);
-        calc.defKey(R.id.bLog_cos, Calc.TRIG, "COS", false, calc::op_cos);
-        calc.defKey(R.id.bLog_cos, Calc.TRIG+Calc.SHIFT, "ACOS", false, calc::op_acos);
+        calc.defKey(R.id.bLog_cos, Calc.NORMAL, "Log", false, calc::op_log10);
+        calc.defKey(R.id.bLog_cos, Calc.SHIFT, "10^x", false, calc::op_pow10);
+        calc.defKey(R.id.bLog_cos, Calc.TRIG, "Cos", false, calc::op_cos);
+        calc.defKey(R.id.bLog_cos, Calc.TRIG+Calc.SHIFT, "ACos", false, calc::op_acos);
 
-        calc.defKey(R.id.bLn_tan, Calc.NORMAL, "LN", false, calc::op_ln);
-        calc.defKey(R.id.bLn_tan, Calc.SHIFT, "E^X", false, calc::op_exp);
-        calc.defKey(R.id.bLn_tan, Calc.TRIG, "TAN", false, calc::op_tan);
-        calc.defKey(R.id.bLn_tan, Calc.TRIG+Calc.SHIFT, "ATAN", false, calc::op_atan);
+        calc.defKey(R.id.bLn_tan, Calc.NORMAL, "Ln", false, calc::op_ln);
+        calc.defKey(R.id.bLn_tan, Calc.SHIFT, "e^x", false, calc::op_exp);
+        calc.defKey(R.id.bLn_tan, Calc.TRIG, "Tan", false, calc::op_tan);
+        calc.defKey(R.id.bLn_tan, Calc.TRIG+Calc.SHIFT, "ATan", false, calc::op_atan);
 
         //---------- without TRIG mode (2 rows) -------------
         calc.defKey(R.id.bSquare, Calc.NORMAL, "⎷x",  false, calc::op_sqrt);
         calc.defKey(R.id.bSquare, Calc.SHIFT,  "x^2",  false, calc::op_sq);
-        calc.defKey(R.id.bPower,  Calc.NORMAL, "Y^X",  false, calc::op_pow);
-        calc.defKey(R.id.bPower,  Calc.SHIFT,  "X⎷Y", false, calc::op_n_sqrt);
-        calc.defKey(R.id.bLog,    Calc.NORMAL, "LOG",  false, calc::op_log10);
-        calc.defKey(R.id.bLog,    Calc.SHIFT,  "10^X", false, calc::op_pow10);
-        calc.defKey(R.id.bLn,     Calc.NORMAL, "LN",   false, calc::op_ln);
-        calc.defKey(R.id.bLn,     Calc.SHIFT,  "E^X",  false, calc::op_exp);
+        calc.defKey(R.id.bPower,  Calc.NORMAL, "y^x",  false, calc::op_pow);
+        calc.defKey(R.id.bPower,  Calc.SHIFT,  "x⎷y", false, calc::op_n_sqrt);
+        calc.defKey(R.id.bLog,    Calc.NORMAL, "Log",  false, calc::op_log10);
+        calc.defKey(R.id.bLog,    Calc.SHIFT,  "10^x", false, calc::op_pow10);
+        calc.defKey(R.id.bLn,     Calc.NORMAL, "Ln",   false, calc::op_ln);
+        calc.defKey(R.id.bLn,     Calc.SHIFT,  "e^x",  false, calc::op_exp);
 
-        calc.defKey(R.id.bDeg, Calc.NORMAL, "DEG",  false, calc::op_to_deg);
-        calc.defKey(R.id.bDeg, Calc.SHIFT,  "RAD",  false, calc::op_to_rad);
-        calc.defKey(R.id.bSin, Calc.NORMAL, "SIN",  false, calc::op_sin);
-        calc.defKey(R.id.bSin, Calc.SHIFT,  "ASIN", false, calc::op_asin);
-        calc.defKey(R.id.bCos, Calc.NORMAL, "COS",  false, calc::op_cos);
-        calc.defKey(R.id.bCos, Calc.SHIFT,  "ACOS", false, calc::op_acos);
-        calc.defKey(R.id.bTan, Calc.NORMAL, "TAN",  false, calc::op_tan);
-        calc.defKey(R.id.bTan, Calc.SHIFT,  "ATAN", false, calc::op_atan);
+        calc.defKey(R.id.bDeg, Calc.NORMAL, "Deg",  false, calc::op_to_deg);
+        calc.defKey(R.id.bDeg, Calc.SHIFT,  "Rad",  false, calc::op_to_rad);
+        calc.defKey(R.id.bSin, Calc.NORMAL, "Sin",  false, calc::op_sin);
+        calc.defKey(R.id.bSin, Calc.SHIFT,  "ASin", false, calc::op_asin);
+        calc.defKey(R.id.bCos, Calc.NORMAL, "Cos",  false, calc::op_cos);
+        calc.defKey(R.id.bCos, Calc.SHIFT,  "ACos", false, calc::op_acos);
+        calc.defKey(R.id.bTan, Calc.NORMAL, "Tan",  false, calc::op_tan);
+        calc.defKey(R.id.bTan, Calc.SHIFT,  "ATan", false, calc::op_atan);
         //----------------------------------
 
-        calc.defKey(R.id.bPI, Calc.NORMAL, "PI", false, calc::op_pi);
+        calc.defKey(R.id.bPI, Calc.NORMAL, "π", false, calc::op_pi);
         calc.defKey(R.id.bPI, Calc.SHIFT, "2πF", false, calc::op_2piF);
 
         //update interface
