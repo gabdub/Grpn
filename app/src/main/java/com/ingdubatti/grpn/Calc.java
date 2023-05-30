@@ -879,4 +879,9 @@ class Calc {
             }
         }
     }
+
+    void op_clear_stk() {  //clear stack
+        finEdit();
+        stacklen= 0;
+    }
 }

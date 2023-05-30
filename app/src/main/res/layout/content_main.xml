@@ -120,7 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
-                android:text="[F1]"
+                android:text="CLEAR"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -195,7 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#E6E6E6"
-                android:text="[F8]"
+                android:text="VF"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
         </TableRow>
@@ -329,7 +329,7 @@
                 style="@android:style/Widget.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#F3E5F5"
+                android:backgroundTint="#FFCDD2"
                 android:text="SWAP"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />

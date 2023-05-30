@@ -132,11 +132,11 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bHex, Calc.HEXA, "HEX", true, () -> calc.set_mode_flag(Calc.HEXA, false));
 
         //---------- with TRIG mode (1 row) -------------
-        calc.defKey(R.id.bSwap_trig, Calc.NORMAL, "Swap", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_trig, Calc.NORMAL, "x<>y", false, calc::op_swap);
         calc.defKey(R.id.bSwap_trig, Calc.SHIFT, "TRIG", false, () -> calc.set_mode_flag(Calc.TRIG, true));
         calc.defKey(R.id.bSwap_trig, Calc.TRIG+Calc.SHIFT, "TRIG", true, () -> calc.set_mode_flag(Calc.TRIG, false));
         //---------- without TRIG mode (2 rows) -------------
-        calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "Swap", false, calc::op_swap);
+        calc.defKey(R.id.bSwap_roll, Calc.NORMAL, "x<>y", false, calc::op_swap);
         calc.defKey(R.id.bSwap_roll, Calc.SHIFT, "▶ Z", false, calc::op_roll_xzy);
         //----------------------------------
 
@@ -185,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b_F, Calc.SHIFT, "▶ F", false, () -> calc.op_store_var(5));
         calc.defKey(R.id.b_F, Calc.HEXA, "F", true, () -> calc.edit_append('F'));
 
+        calc.defKey(R.id.b_f1, Calc.NORMAL, "CLEAR", false, calc::op_clear_stk);
         calc.defKey(R.id.b_f8, Calc.NORMAL, "Vf", false, calc::op_exp3_vf);
         calc.defKey(R.id.b_f8, Calc.SHIFT, "τ", false, calc::op_exp3_tao);
 
@@ -197,13 +198,13 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.bInv, Calc.NORMAL, "1/x", false, calc::op_invert_x);
         calc.defKey(R.id.bInv, Calc.SHIFT, "Z ▶", false, calc::op_roll_yxz);
 
-        calc.defKey(R.id.bEnter, Calc.NORMAL, "Enter", false, calc::edit_enter);
-        calc.defKey(R.id.bEnter, Calc.SHIFT, "Edit", false, calc::edit_x);
+        calc.defKey(R.id.bEnter, Calc.NORMAL, "ENTER", false, calc::edit_enter);
+        calc.defKey(R.id.bEnter, Calc.SHIFT, "EDIT", false, calc::edit_x);
 
         calc.defKey(R.id.bSigno, Calc.NORMAL, "+/-", false, calc::edit_signo);
 
-        calc.defKey(R.id.bDelete, Calc.NORMAL, "Del", false, calc::edit_delete);
-        calc.defKey(R.id.bDelete, Calc.SHIFT, "Undo", false, calc::edit_undo);
+        calc.defKey(R.id.bDelete, Calc.NORMAL, "DEL", false, calc::edit_delete);
+        calc.defKey(R.id.bDelete, Calc.SHIFT, "UNDO", false, calc::edit_undo);
 
         calc.defKey(R.id.bDiv, Calc.NORMAL, "/", false, calc::op_div);
         calc.defKey(R.id.bDiv, Calc.SHIFT, "/ ▶ %", false, calc::op_div_porc);
