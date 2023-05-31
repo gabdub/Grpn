@@ -122,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         calc.undoX= loadCfgDbl(settings, "undoX", 0.0 );
         calc.undoY= loadCfgDbl(settings, "undoY", 0.0 );
         calc.undoZ= loadCfgDbl(settings, "undoZ", 0.0 );
+        calc.undo_stacklen= settings.getInt("undo_stacklen", 0);
 
         ////////////////// BUTTONS //////////////////
         /////---------modificadores----------
@@ -310,7 +311,11 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder stk= new StringBuilder();
         stk.append(calc.stacklen);
         stk.append(',');
-        for(int i=0; i< calc.stacklen; i++){
+        int ns= calc.stacklen;
+        if( ns == 0 ){
+            ns= calc.undo_stacklen;
+        }
+        for(int i=0; i< ns; i++){
             stk.append(calc.stack[i]);
             stk.append(',');
         }
@@ -324,6 +329,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("undoX", Double.toString(calc.undoX));
         editor.putString("undoY", Double.toString(calc.undoY));
         editor.putString("undoZ", Double.toString(calc.undoZ));
+        editor.putInt("undo_stacklen", calc.undo_stacklen);
         editor.apply();
     }
 }

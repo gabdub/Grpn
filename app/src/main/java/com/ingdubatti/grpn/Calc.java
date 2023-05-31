@@ -45,6 +45,8 @@ class Calc {
     double undoY= 0;
     double undoZ= 0;
     int undoN= 0; //0=no hay, 1=X, 2=XY, 3=XYZ
+
+    int undo_stacklen= 0;
     private boolean stack_change= false;
 
     public interface action {
@@ -216,6 +218,7 @@ class Calc {
         }
         stack[stacklen]= v;
         stacklen++;
+        undo_stacklen= 0; //cancel CLEAR stack undo
     }
 
     private double parseHexa(String sh) {
@@ -527,17 +530,24 @@ class Calc {
         if( editando ) {        //cancela edit
             stacklen--;         //quita el 0
             editando = false;
-        }else{                  //recupera argumentos de la ultima OP
-            if (undoN > 2) {
-                pushStack(undoZ);
+        }else{
+            if( (undo_stacklen > 0) && (stacklen == 0) ){
+                //undo CLEAR STACK
+                stacklen= undo_stacklen;
+                undo_stacklen= 0;
+            }else {
+                //recupera argumentos de la ultima OP
+                if (undoN > 2) {
+                    pushStack(undoZ);
+                }
+                if (undoN > 1) {
+                    pushStack(undoY);
+                }
+                if (undoN > 0) {
+                    pushStack(undoX);
+                }
+                undoN = 0;
             }
-            if (undoN > 1) {
-                pushStack(undoY);
-            }
-            if (undoN > 0) {
-                pushStack(undoX);
-            }
-            undoN = 0;
         }
         stack_change= true;     //fuerza update del stack al terminar la accion
     }
@@ -882,6 +892,9 @@ class Calc {
 
     void op_clear_stk() {  //clear stack
         finEdit();
-        stacklen= 0;
+        if( stacklen > 0 ) {
+            undo_stacklen= stacklen;
+            stacklen = 0;
+        }
     }
 }
