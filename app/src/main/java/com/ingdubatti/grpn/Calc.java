@@ -27,10 +27,18 @@ class Calc {
     private static final int MAXSTACK= 100;
     static final int MAXVARS= 6;   //A...F
 
+    static final int MAXMACROS= 4;
+    static final int MAX_MACRO_STEPS= 100;
+    final long[][] macros= new long[MAXMACROS][MAX_MACRO_STEPS];
+    final int[] macro_len= new int[MAXMACROS];
+
     int modo= NORMAL;
     private int next_modo= NORMAL;
 
     boolean editando= false;
+    boolean macro_rec= false;
+    boolean allow_macro_rec = false;
+    int current_macro= 0;
 
     final double[] stack= new double[MAXSTACK];
     int stacklen= 0;
@@ -380,7 +388,19 @@ class Calc {
         long k = getKmode(k0, modo);
         if (hmKAct.containsKey(k)) {
             action act= hmKAct.get(k);
-            if (act != null) act.doAction();     //ejecuta la accion de la tecla
+            if (act != null){
+                allow_macro_rec = true;  //allow the action to exclude itself from the macro recording
+                act.doAction();     //ejecuta la accion de la tecla
+                if( (macro_rec) && (allow_macro_rec) ){
+                    int n= macro_len[current_macro];
+                    macros[current_macro][n]= k;    //save k in macro list
+                    n++;
+                    macro_len[current_macro]= n;
+                    if( n >= MAX_MACRO_STEPS){  //no more room, stop recording
+                        op_end_macro();
+                    }
+                }
+            }
         }
 
         //cuando cambio el modo: ajusta solo los botones que hagan falta (texto y hilight)
@@ -494,6 +514,8 @@ class Calc {
 
     /* --------------- key actions ----------------- */
     void set_mode_flag(int modeflg, boolean on_off) {    //set SHIFT/HEXA/TRIG mode on/off
+        allow_macro_rec= false; //don't save keys that change the mode of the keyboard
+
         if ((modeflg == HEXA) && (!finEdit())) return;
         if (on_off) {
             next_modo |= modeflg;       //setea flag de modo
@@ -926,13 +948,39 @@ class Calc {
     }
 
     void op_save_macro(int nmac) {  //save key macro
-        set_mode_flag(Calc.MACRO, true);
+        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
+            current_macro= nmac-1;
+            macro_len[current_macro]= 0;
+            macro_rec= true;
+            set_mode_flag(Calc.MACRO, true);
+        }
     }
 
     void op_end_macro() {  //end save key macro
-        set_mode_flag(Calc.MACRO, false);
+        if( macro_rec ) {
+            macro_rec = false;
+            int n = macro_len[current_macro];
+            String ms = "Macro #" + (current_macro + 1) + " : " + n + " steps saved";
+            activity.showInfo(ms);
+            set_mode_flag(Calc.MACRO, false);
+        }
     }
 
     void op_play_macro(int nmac) {  //play key macro
+        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
+            int nm= nmac-1;
+            int n= macro_len[nm];
+            if( n > 0){
+                for( int i= 0; i < n; i++ ) {
+                    long k= macros[nm][i];      //re-play the saved actions
+                    action act = hmKAct.get(k);
+                    if (act != null) {
+                        act.doAction();
+                    }
+                }
+            }else{
+                activity.showInfo("Macro #" +nmac + " is empty");
+            }
+        }
     }
 }
