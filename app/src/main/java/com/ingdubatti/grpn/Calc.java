@@ -957,12 +957,12 @@ class Calc {
     }
 
     void op_end_macro() {  //end save key macro
+        set_mode_flag(Calc.MACRO, false);
         if( macro_rec ) {
             macro_rec = false;
             int n = macro_len[current_macro];
             String ms = "Macro #" + (current_macro + 1) + " : " + n + " steps saved";
             activity.showInfo(ms);
-            set_mode_flag(Calc.MACRO, false);
         }
     }
 
