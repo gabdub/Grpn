@@ -948,7 +948,7 @@ class Calc {
     }
 
     void op_save_macro(int nmac) {  //save key macro
-        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
+        if( finEdit() && (nmac >= 1) && (nmac <= MAXMACROS) ) {
             current_macro= nmac-1;
             macro_len[current_macro]= 0;
             macro_rec= true;
@@ -967,19 +967,19 @@ class Calc {
     }
 
     void op_play_macro(int nmac) {  //play key macro
-        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
-            int nm= nmac-1;
-            int n= macro_len[nm];
-            if( n > 0){
-                for( int i= 0; i < n; i++ ) {
-                    long k= macros[nm][i];      //re-play the saved actions
+        if( finEdit() && (nmac >= 1) && (nmac <= MAXMACROS) ) {
+            int nm = nmac - 1;
+            int n = macro_len[nm];
+            if (n > 0) {
+                for (int i = 0; i < n; i++) {
+                    long k = macros[nm][i];      //re-play the saved actions
                     action act = hmKAct.get(k);
                     if (act != null) {
                         act.doAction();
                     }
                 }
-            }else{
-                activity.showInfo("Macro #" +nmac + " is empty");
+            } else {
+                activity.showInfo("Macro #" + nmac + " is empty");
             }
         }
     }
