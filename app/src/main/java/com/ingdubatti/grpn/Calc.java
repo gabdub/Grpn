@@ -16,7 +16,8 @@ class Calc {
     static final int SHIFT= 1;
     static final int HEXA= 2;
     static final int TRIG= 4;
-    private static final int _KEY_MULT= 8;
+    static final int MACRO= 8;
+    private static final int _KEY_MULT= 16;
 
     static final int hicolor= 0xff0000c0;  //dark blue
     static final int locolor= 0xff000000;  //black
@@ -414,18 +415,14 @@ class Calc {
 
     //Key definition
     void defKey(int keyid, int modif, String txt, boolean hilight, action act ) {
-        Button bKey;
-
-        bKey = activity.findViewById(keyid);
-        if( bKey == null ){
-          return; //ignorar si el layout no usa esta tecla
-        }
-
         long k0= (long) keyid * _KEY_MULT;
         long k=  k0 + modif;
         if (!hmKTxt.containsKey(k0)) {
             //conecta una sola vez cada tecla con un evento generico
-            bKey.setOnClickListener(this::onKeyClick);
+            Button bKey = activity.findViewById(keyid);
+            if( bKey != null ){//ignorar si el layout no usa esta tecla
+                bKey.setOnClickListener(this::onKeyClick);
+            }
             //la primera definicion deberia ser NORMAL
             if (modif != NORMAL) {  //si no es, inserta una normal vacia
                 hmKTxt.put(k0,"");
@@ -443,21 +440,51 @@ class Calc {
         }else if (modif == SHIFT) {  //set SHIFT default
             hmKmap.put(k+HEXA,k);
             hmKmap.put(k+TRIG,k);
+            hmKmap.put(k+MACRO,k);
             hmKmap.put(k+HEXA+TRIG,k);
+            hmKmap.put(k+HEXA+MACRO,k);
+            hmKmap.put(k+TRIG+MACRO,k);
+            hmKmap.put(k+HEXA+TRIG+MACRO,k);
         }else if (modif == HEXA) {  //set HEXA default
             hmKmap.put(k+SHIFT,k);
             hmKmap.put(k+TRIG,k);
+            hmKmap.put(k+MACRO,k);
             hmKmap.put(k+TRIG+SHIFT,k);
+            hmKmap.put(k+SHIFT+MACRO,k);
+            hmKmap.put(k+TRIG+MACRO,k);
+            hmKmap.put(k+TRIG+SHIFT+MACRO,k);
         }else if (modif == HEXA+SHIFT) {  //set HEXA+SHIFT default
             hmKmap.put(k+TRIG,k);
+            hmKmap.put(k+MACRO,k);
+            hmKmap.put(k+TRIG+MACRO,k);
         }else if (modif == TRIG) {  //set TRIG default
             hmKmap.put(k+SHIFT,k);
             hmKmap.put(k+HEXA,k);
+            hmKmap.put(k+MACRO,k);
             hmKmap.put(k+HEXA+SHIFT,k);
+            hmKmap.put(k+SHIFT+MACRO,k);
+            hmKmap.put(k+HEXA+MACRO,k);
+            hmKmap.put(k+HEXA+SHIFT+MACRO,k);
         }else if (modif == TRIG+SHIFT) {  //set TRIG+SHIFT default
             hmKmap.put(k+HEXA,k);
+            hmKmap.put(k+MACRO,k);
+            hmKmap.put(k+HEXA+MACRO,k);
         }else if (modif == HEXA+TRIG) {  //set HEXA+TRIG default
             hmKmap.put(k+SHIFT,k);
+            hmKmap.put(k+MACRO,k);
+            hmKmap.put(k+SHIFT+MACRO,k);
+        }else if (modif == MACRO) {  //set MACRO default
+            hmKmap.put(k+SHIFT,k);
+            hmKmap.put(k+HEXA,k);
+            hmKmap.put(k+HEXA+SHIFT,k);
+            hmKmap.put(k+TRIG,k);
+            hmKmap.put(k+TRIG+SHIFT,k);
+            hmKmap.put(k+HEXA+TRIG,k);
+            hmKmap.put(k+HEXA+TRIG+SHIFT,k);
+        }else if (modif == MACRO+SHIFT) {  //set MACRO+SHIFT default
+            hmKmap.put(k+HEXA,k);
+            hmKmap.put(k+TRIG,k);
+            hmKmap.put(k+HEXA+TRIG,k);
         }
         if (modif != NORMAL) {
             //registra las teclas que usan modificadores
@@ -896,5 +923,16 @@ class Calc {
             undo_stacklen= stacklen;
             stacklen = 0;
         }
+    }
+
+    void op_save_macro(int nmac) {  //save key macro
+        set_mode_flag(Calc.MACRO, true);
+    }
+
+    void op_end_macro() {  //end save key macro
+        set_mode_flag(Calc.MACRO, false);
+    }
+
+    void op_play_macro(int nmac) {  //play key macro
     }
 }

@@ -187,8 +187,21 @@ public class MainActivity extends AppCompatActivity {
         calc.defKey(R.id.b_F, Calc.HEXA, "F", true, () -> calc.edit_append('F'));
 
         calc.defKey(R.id.b_f1, Calc.NORMAL, "CLEAR", false, calc::op_clear_stk);
-        calc.defKey(R.id.b_f8, Calc.NORMAL, "Vf", false, calc::op_exp3_vf);
-        calc.defKey(R.id.b_f8, Calc.SHIFT, "τ", false, calc::op_exp3_tao);
+        calc.defKey(R.id.b_f4, Calc.NORMAL, "Vf", false, calc::op_exp3_vf);
+        calc.defKey(R.id.b_f4, Calc.SHIFT, "τ", false, calc::op_exp3_tao);
+
+        calc.defKey(R.id.b_f5, Calc.NORMAL, "M1 ▶", false, () -> calc.op_play_macro(1));
+        calc.defKey(R.id.b_f5, Calc.SHIFT, "M1 ●", false, () -> calc.op_save_macro(1));
+        calc.defKey(R.id.b_f5, Calc.MACRO, "◼", true, calc::op_end_macro);
+        calc.defKey(R.id.b_f6, Calc.NORMAL, "M2 ▶", false, () -> calc.op_play_macro(2));
+        calc.defKey(R.id.b_f6, Calc.SHIFT, "M2 ●", false, () -> calc.op_save_macro(2));
+        calc.defKey(R.id.b_f6, Calc.MACRO, "◼", true, calc::op_end_macro);
+        calc.defKey(R.id.b_f7, Calc.NORMAL, "M3 ▶", false, () -> calc.op_play_macro(3));
+        calc.defKey(R.id.b_f7, Calc.SHIFT, "M3 ●", false, () -> calc.op_save_macro(3));
+        calc.defKey(R.id.b_f7, Calc.MACRO, "◼", true, calc::op_end_macro);
+        calc.defKey(R.id.b_f8, Calc.NORMAL, "M4 ▶", false, () -> calc.op_play_macro(4));
+        calc.defKey(R.id.b_f8, Calc.SHIFT, "M4 ●", false, () -> calc.op_save_macro(4));
+        calc.defKey(R.id.b_f8, Calc.MACRO, "◼", true, calc::op_end_macro);
 
         calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, calc::op_r_par);
         calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);
