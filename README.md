@@ -31,9 +31,14 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 `    \\option 3: new class`
 `    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}  });`
 
+**Default layout: Ver 1.3 (screen: 2400 x 1080)**
+
+![Default layout 1.3](https://github.com/gabdub/Grpn/raw/master/screencapt/default1_3.jpg "Default layout 1.3")  ![SHIFT layout 1.3](https://github.com/gabdub/Grpn/raw/master/screencapt/shift1_3.jpg "SHIFT layout 1.3")
+
+
 **Default layout: Ver 1.2 (HD screen: 1920 x 1080)**
 
-![Default layout](https://github.com/gabdub/Grpn/raw/master/screencapt/default.jpg "Default layout 1.2")  ![SHIFT layout](https://github.com/gabdub/Grpn/raw/master/screencapt/shift.jpg "SHIFT layout")
+![Default layout 1.2](https://github.com/gabdub/Grpn/raw/master/screencapt/default.jpg "Default layout 1.2")  ![SHIFT layout 1.2](https://github.com/gabdub/Grpn/raw/master/screencapt/shift.jpg "SHIFT layout 1.2")
 
 
 **Landscape layout: Ver 1.2 / 1.3**
