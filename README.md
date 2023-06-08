@@ -17,6 +17,9 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **E+3** / **E-3** = add or subtract 3 from the exponent
 * **.0 to .9** = truncate X to N decimal places
 * polar to rectangular conversion
+* **version 1.3**: bigger screen resolution (more buttons in portrait mode): **2400 x 1080**
+* **4 macros**: up to 100 keys each
+* **3 point negative exponential estimation**: final value and time constant τ (tao) estimation
 * tabular key definition:
 
 `    \\option 1: method reference`
@@ -28,14 +31,14 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 `    \\option 3: new class`
 `    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}  });`
 
-**Default layout:**
+**Default layout: Ver 1.2 (HD screen: 1920 x 1080)**
 
-![Default layout](https://github.com/gabdub/Grpn/raw/master/screencapt/default.jpg "Default layout")  ![SHIFT layout](https://github.com/gabdub/Grpn/raw/master/screencapt/shift.jpg "SHIFT layout")
+![Default layout](https://github.com/gabdub/Grpn/raw/master/screencapt/default.jpg "Default layout 1.2")  ![SHIFT layout](https://github.com/gabdub/Grpn/raw/master/screencapt/shift.jpg "SHIFT layout")
 
 
-**Landscape layout:**
+**Landscape layout: Ver 1.2 / 1.3**
 
-![Landscape layout](https://github.com/gabdub/Grpn/raw/master/screencapt/landscape.jpg "Landscape layout")
+![Landscape layout](https://github.com/gabdub/Grpn/raw/master/screencapt/landscape.jpg "Landscape layout 1.2 / 1.3")
 
 
 **Some trigonometric functions:**
