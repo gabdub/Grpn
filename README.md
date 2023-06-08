@@ -20,7 +20,7 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **version 1.3**: bigger screen resolution **2400 x 1080** : more buttons in portrait mode
 * **4 macros**: up to 100 keys each
 * **3 point negative exponential estimation**: final value and time constant τ (tao) estimation
-* **CLEAR stack**: clear all the element in the stack (can be UNDOed)
+* **CLEAR stack**: clear all the element in the stack (can be UNDOne)
 * tabular key definition:
 
 ` \\option 1: method reference`
