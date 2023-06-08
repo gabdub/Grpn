@@ -29,8 +29,8 @@ class Calc {
 
     static final int MAXMACROS= 4;
     static final int MAX_MACRO_STEPS= 100;
-    final long[][] macros= new long[MAXMACROS][MAX_MACRO_STEPS];
-    final int[] macro_len= new int[MAXMACROS];
+    static final long[][] macros= new long[MAXMACROS][MAX_MACRO_STEPS];
+    static final int[] macro_len= new int[MAXMACROS];
 
     int modo= NORMAL;
     private int next_modo= NORMAL;
@@ -980,6 +980,39 @@ class Calc {
                 }
             } else {
                 activity.showInfo("Macro #" + nmac + " is empty");
+            }
+        }
+    }
+
+    static String get_macro_as_str(int nmac){
+        StringBuilder stk= new StringBuilder();
+        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
+            int nm = nmac - 1;
+            int n = macro_len[nm];
+            stk.append(n);
+            stk.append(',');
+            if (n > 0) {
+                for (int i = 0; i < n; i++) {
+                    long k = macros[nm][i];
+                    stk.append(k);
+                    stk.append(',');
+                }
+            }
+        }
+        return stk.toString();
+    }
+
+    static void set_macro_from_str(int nmac, String s){
+        if( (nmac >= 1) && (nmac <= MAXMACROS) ) {
+            int nm = nmac - 1;
+            String[] slist = s.split(",");
+            if( slist.length > 1 ){
+                macro_len[nm]= Integer.parseInt( slist[0] );
+                for(int i= 1; i < slist.length; i++){
+                    try {
+                        macros[nm][i-1]=  Long.parseLong(slist[i]);
+                    }catch (Exception ignored){}
+                }
             }
         }
     }
