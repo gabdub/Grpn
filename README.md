@@ -17,19 +17,20 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **E+3** / **E-3** = add or subtract 3 from the exponent
 * **.0 to .9** = truncate X to N decimal places
 * polar to rectangular conversion
-* **version 1.3**: bigger screen resolution (more buttons in portrait mode): **2400 x 1080**
+* **version 1.3**: bigger screen resolution **2400 x 1080** : more buttons in portrait mode
 * **4 macros**: up to 100 keys each
 * **3 point negative exponential estimation**: final value and time constant τ (tao) estimation
+* **CLEAR stack**: clear all the element in the stack (can be UNDOed)
 * tabular key definition:
 
-`    \\option 1: method reference`
-`    calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);`
+` \\option 1: method reference`
+` calc.defKey(R.id.bParalelo, Calc.SHIFT, "R ▶ P", false, calc::op_rect_polar);`
 
-`    \\option 2: lambda`
-`    calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, () -> calc.op_kdiv(16.0));`
+` \\option 2: lambda`
+` calc.defKey(R.id.bMili_exp, Calc.HEXA,   ">>4", false, () -> calc.op_kdiv(16.0));`
 
-`    \\option 3: new class`
-`    calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}  });`
+` \\option 3: new class`
+` calc.defKey(R.id.bParalelo, Calc.NORMAL, "x||y", false, new Calc.action(){   public void doAction(){ calc.op_r_par();}  });`
 
 **Default layout: Ver 1.3 (screen: 2400 x 1080)**
 
