@@ -33,17 +33,17 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 
 **Default layout: Ver 1.3 (screen: 2400 x 1080)**
 
-![Default layout 1.3](https://github.com/gabdub/Grpn/raw/master/screencapt/default1_3.jpg "Default layout 1.3")  ![SHIFT layout 1.3](https://github.com/gabdub/Grpn/raw/master/screencapt/shift1_3.jpg "SHIFT layout 1.3")
+![Default layout 1.3](https://github.com/gabdub/Grpn/blob/master/screencapt/default1_3.jpg "Default layout 1.3")  ![SHIFT layout 1.3](https://github.com/gabdub/Grpn/blob/master/screencapt/shift1_3.jpg "SHIFT layout 1.3")
 
 
 **Default layout: Ver 1.2 (HD screen: 1920 x 1080)**
 
-![Default layout 1.2](https://github.com/gabdub/Grpn/raw/master/screencapt/default.jpg "Default layout 1.2")  ![SHIFT layout 1.2](https://github.com/gabdub/Grpn/raw/master/screencapt/shift.jpg "SHIFT layout 1.2")
+![Default layout 1.2](https://github.com/gabdub/Grpn/blob/master/screencapt/default.jpg "Default layout 1.2")  ![SHIFT layout 1.2](https://github.com/gabdub/Grpn/blob/master/screencapt/shift.jpg "SHIFT layout 1.2")
 
 
 **Landscape layout: Ver 1.2 / 1.3**
 
-![Landscape layout](https://github.com/gabdub/Grpn/raw/master/screencapt/landscape.jpg "Landscape layout 1.2 / 1.3")
+![Landscape layout](https://github.com/gabdub/Grpn/blob/master/screencapt/landscape.jpg "Landscape layout 1.2 / 1.3")
 
 
 **Some trigonometric functions:**
@@ -54,7 +54,7 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **R ▶ P** = rectangular to polar (degrees)
 * **P ▶ R** = polar (degrees) to rectangular
 
-![Trig layout](https://github.com/gabdub/Grpn/raw/master/screencapt/trig.jpg "TRIG layout")  ![SHIFT TRIG layout](https://github.com/gabdub/Grpn/raw/master/screencapt/trig_shift.jpg "SHIFT TRIG layout")
+![Trig layout](https://github.com/gabdub/Grpn/blob/master/screencapt/trig.jpg "TRIG layout")  ![SHIFT TRIG layout](https://github.com/gabdub/Grpn/blob/master/screencapt/trig_shift.jpg "SHIFT TRIG layout")
 
 
 **HEX mode:**
@@ -63,5 +63,5 @@ After almost 40 years of using HP's RPN calculators, I programmed one for my And
 * **<<4** / **>>4** = shift one nibble (4 bits) to the right (x/16) or left (x*16)
 * **NOT** = one's complement
 
-![Hex layout](https://github.com/gabdub/Grpn/raw/master/screencapt/hex.jpg "Hex layout")
+![Hex layout](https://github.com/gabdub/Grpn/blob/master/screencapt/hex.jpg "Hex layout")
 
