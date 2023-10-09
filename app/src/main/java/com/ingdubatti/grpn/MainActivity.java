@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
         calc.undoZ= loadCfgDbl(settings, "undoZ", 0.0 );
         calc.undo_stacklen= settings.getInt("undo_stacklen", 0);
 
-        for(int nm= 1; nm < Calc.MAXMACROS; nm++){
+        for(int nm= 1; nm <= Calc.MAXMACROS; nm++){
             String s= settings.getString("macro"+nm,"");
             Calc.set_macro_from_str(nm, s);
         }
@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("undoZ", Double.toString(calc.undoZ));
         editor.putInt("undo_stacklen", calc.undo_stacklen);
 
-        for(int nm= 1; nm < Calc.MAXMACROS; nm++){
+        for(int nm= 1; nm <= Calc.MAXMACROS; nm++){
             editor.putString("macro"+nm, Calc.get_macro_as_str(nm) );
         }
         editor.apply();
